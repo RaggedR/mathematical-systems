@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Obstruction Formula}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+The obstruction formula quantifies the cost of non-holomorphicity at the level of initial data in the context of complex analysis and differential geometry. It is particularly relevant in the study of variable elliptic structures and their rigidity properties. 
+
+Let \( f: U \subset \mathbb{C} \to \mathbb{C} \) be a function that is \( C^1 \) (continuously differentiable) in the real sense. The obstruction formula is derived from the implicit equation:
+
+\begin{equation}
+\lambda = f(y - \lambda x)
+\end{equation}
+
+where \( \lambda \) is a complex variable dependent on \( x \) and \( y \). The formula expresses the relationship between the derivatives of \( \lambda \) and the function \( f \) in terms of the Wirtinger derivatives \( f_w \) and \( f_{\bar{w}} \):
+
+\begin{equation}
+H = \lambda_x + \lambda \lambda_y
+\end{equation}
+
+The intrinsic obstruction \( G \) is defined as:
+
+\begin{equation}
+G := i x + i y
+\end{equation}
+
+A structure is termed rigid if \( G \equiv 0 \), which implies that the associated spectral slope \( \lambda \) satisfies the transport equation:
+
+\begin{equation}
+\lambda_x + \lambda \lambda_y = 0
+\end{equation}
+
+This condition indicates that the structure is holomorphic.
+
+\section{Examples}
+Consider the function \( f(w, \bar{w}) = w^2 + \bar{w}^2 \). We can compute the obstruction using the formula:
+
+1. Compute the Wirtinger derivatives:
+   \[
+   f_w = 2w, \quad f_{\bar{w}} = 2\bar{w}
+   \]
+
+2. Substitute into the obstruction formula:
+   \[
+   H = \lambda_x + \lambda \lambda_y
+   \]
+
+3. If we assume \( \lambda = f(y - \lambda x) \) leads to a non-holomorphic function, we can evaluate \( H \) at specific points to see if it vanishes or not.
+
+For instance, if \( \lambda = 2(y - \lambda x) \), we can analyze the behavior of \( H \) as \( x \) and \( y \) vary. If \( H \neq 0 \), it indicates the presence of an obstruction to holomorphicity.
+
+\section{Key Results}
+The obstruction formula has been pivotal in establishing the following key results:
+
+- **Theorem 3.1 (Alayón-Solarz, 2023)**: If \( \lambda = f(y - \lambda x) \) satisfies the equation \( \lambda_x + \lambda \lambda_y = 0 \) on an open set \( \Omega \subset \mathbb{R}^2 \), then \( f \) must be holomorphic on \( U \). This theorem establishes that the requirement of holomorphicity is not merely an assumption but a necessary condition for rigidity.
+
+- The rigidity condition implies that the intrinsic obstruction \( G \) vanishes, leading to the conclusion that the structure behaves holomorphically.
+
+\section{Diagrams / Visual Description}
+To visualize the obstruction formula, consider a plot in the \( (x, y) \) plane where the regions where \( H = 0 \) correspond to holomorphic structures. The areas where \( H \neq 0 \) indicate the presence of obstructions, which can be represented as shaded regions on the plot.
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{obstruction_diagram.png}
+\caption{Regions of holomorphicity and obstructions in the \( (x, y) \) plane.}
+\end{center}
+
+\section{Connections}
+The obstruction formula is closely related to several concepts in complex analysis and differential geometry:
+
+- **Holomorphic Functions**: The formula quantifies the deviation from holomorphicity, linking it to the rigidity of structures.
+- **Cauchy-Riemann Equations**: The obstruction formula can be seen as a generalization of the Cauchy-Riemann equations in the context of variable elliptic structures.
+- **Beltrami Coefficients**: The obstruction is related to the Beltrami coefficients, which measure the deviation from being holomorphic and are crucial in the study of quasiconformal mappings.
+
+The interplay between these concepts highlights the importance of the obstruction formula in understanding the geometric and analytic properties of complex structures.
+
+\section{References}
+- Alayón-Solarz, D. (2023). "The Obstruction Formula and Holomorphicity." arXiv:2602.19251v1.
+- Alayón-Solarz, D. (2023). "Rigidity and the Poincaré Geometry of the Beltrami Disk." arXiv:2602.19274v4.\end{document}

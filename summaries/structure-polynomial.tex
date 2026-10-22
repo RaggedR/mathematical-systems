@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Structure Polynomial}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+The \textbf{Structure Polynomial} is a polynomial that characterizes the structure of a variable elliptic system. It is defined in the context of elliptic partial differential equations, where the spectral parameter $\tau$ is expressed in terms of real and imaginary components. Specifically, the structure polynomial is associated with the complex root of the spectral parameter, denoted as:
+
+\begin{equation}
+\tau = p + iq,
+\end{equation}
+
+where $q > 0$ and $p = \text{Re}(\tau)$, $q = \text{Im}(\tau)$. The structure polynomial encapsulates the coefficients of the elliptic system, typically denoted as $\alpha$ and $\beta$, which are crucial for determining the ellipticity of the system.
+
+\section{Examples}
+Consider a variable elliptic system represented by the equations:
+
+\begin{equation}
+\begin{aligned}
+u_x - \alpha v_y &= 0, \\
+v_x + u_y - \beta v_y &= 0,
+\end{aligned}
+\end{equation}
+
+where $\alpha(x, y)$ and $\beta(x, y)$ are functions of the spatial variables. The principal symbol of this system can be expressed as:
+
+\begin{equation}
+P(\xi, \eta) = \begin{pmatrix}
+\xi & -\alpha \eta \\
+\eta & \xi - \beta \eta
+\end{pmatrix}.
+\end{equation}
+
+The determinant of the principal symbol, which is essential for establishing ellipticity, is given by:
+
+\begin{equation}
+\text{det}(P(\xi, \eta)) = \xi^2 - \beta \xi \eta + \alpha \eta^2.
+\end{equation}
+
+The structure polynomial arises from this determinant, and its properties dictate the behavior of the elliptic system.
+
+\section{Key Results}
+A significant result concerning the structure polynomial is its role in determining the rigidity and flatness of the elliptic structure. Specifically, the following definitions are crucial:
+
+\begin{definition}[Rigid Structure]
+The elliptic structure is called rigid if the first-order quantity $T$ defined as:
+
+\begin{equation}
+T := \tau_x + \tau \tau_y \equiv 0 \text{ on } \Omega
+\end{equation}
+
+holds true, where $\Omega$ is the domain of interest. This condition implies that the spectral parameter $\tau$ is constant along characteristic directions.
+
+\end{definition}
+
+\begin{definition}[Flat Structure]
+The elliptic structure is termed flat if the Gaussian curvature $K$ associated with the canonical metric is zero:
+
+\begin{equation}
+K \equiv 0 \text{ on } \Omega.
+\end{equation}
+
+Both conditions depend solely on the structure coefficients $\alpha$ and $\beta$ and their derivatives, as established by Alayón-Solarz (2026) \cite{2601.19274}.
+
+\section{Diagrams / Visual Description}
+The structure polynomial can be visualized in the context of the principal symbol's determinant. The behavior of the determinant in the $(\xi, \eta)$ plane can be depicted as a surface, where the regions of ellipticity correspond to areas where the determinant is non-zero. This surface can be analyzed to understand the transitions between elliptic and non-elliptic regions.
+
+\section{Connections}
+The concept of the structure polynomial is closely related to several areas in the study of elliptic systems, including:
+
+- **Elliptic Regularity**: The structure polynomial plays a critical role in establishing regularity results for solutions to elliptic equations.
+- **Transport Equations**: The evolution of the structure coefficients is governed by transport equations, which are influenced by the structure polynomial.
+- **Complex Analysis**: The relationship between the structure polynomial and complex variables is fundamental in understanding the behavior of solutions to elliptic systems.
+
+These connections highlight the importance of the structure polynomial in both theoretical and applied mathematics, particularly in the analysis of variable elliptic systems.
+
+\section{References}
+\begin{itemize}
+    \item Alayón-Solarz, D. (2026). Variable Elliptic Structures on the Plane: Transport Dynamics, Rigidity, and Function Theory. arXiv:2601.19274.
+\end{itemize}\end{document}

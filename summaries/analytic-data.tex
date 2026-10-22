@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Analytic Data}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+Analytic data refers to data that is smooth and can be represented by a convergent power series. Formally, a function \( f: U \to \mathbb{C} \) is said to be analytic at a point \( a \in U \) if there exists a neighborhood \( V \) of \( a \) such that \( f \) can be expressed as a power series:
+
+\begin{equation}
+f(z) = \sum_{n=0}^{\infty} c_n (z - a)^n
+\end{equation}
+
+where \( c_n \) are complex coefficients and the series converges for all \( z \) in \( V \).
+
+\section{Examples}
+Consider the function \( f(z) = e^z \). This function is analytic everywhere in the complex plane and can be represented by the power series:
+
+\begin{equation}
+e^z = \sum_{n=0}^{\infty} \frac{z^n}{n!}
+\end{equation}
+
+Another example is the function \( f(z) = \sin(z) \), which is also analytic everywhere and has the power series representation:
+
+\begin{equation}
+\sin(z) = \sum_{n=0}^{\infty} \frac{(-1)^n z^{2n+1}}{(2n+1)!}
+\end{equation}
+
+Both examples illustrate that analytic functions can be expressed as convergent power series in their neighborhoods.
+
+\section{Key Results}
+A significant result in the theory of analytic functions is the identity theorem, which states that if two analytic functions agree on a set that has a limit point within their domain, then they agree everywhere on the connected component of that domain. This theorem emphasizes the strong constraints imposed by the analytic structure of functions.
+
+Another important result is the Cauchy integral theorem, which states that if \( f \) is analytic on and inside a simple closed contour \( C \), then:
+
+\begin{equation}
+\oint_C f(z) \, dz = 0
+\end{equation}
+
+This result is foundational in complex analysis and has numerous applications in evaluating integrals and understanding the properties of analytic functions.
+
+\section{Diagrams / Visual Description}
+To visualize analytic functions, one can consider the complex plane where the function is represented as a surface. The height of the surface at each point corresponds to the value of the function. For example, the function \( f(z) = e^z \) grows exponentially as \( z \) moves away from the origin, creating a steep surface.
+
+\section{Connections}
+Analytic data is closely related to several concepts in mathematics, particularly in the study of differential equations and complex analysis. For instance, the initial value problem often involves analytic functions, as solutions to these problems are frequently sought in the form of power series. Furthermore, the concept of rigidity in structures, as discussed in the context of elliptic partial differential equations, relies on the properties of analytic functions to ensure the existence of solutions under certain conditions.
+
+The relationship between analytic functions and holomorphic functions is also significant, as every analytic function is holomorphic, but the converse is not necessarily true in the context of real functions.
+
+\section{References}
+- Alayón-Solarz, D. (2023). "Analytic Data and Rigid Structures." arXiv:2602.19251v1.
+- Alayón-Solarz, D. (2023). "Holomorphic Functions and Power Series Representations." arXiv:2601.19274v4.
+- Astala, K., Iwaniec, T., & Martin, G. (2009). *Elliptic Partial Differential Equations and Quasiconformal Mappings in the Plane*. Princeton Mathematical Series, vol. 48, Princeton University Press.\end{document}

@@ -1,0 +1,96 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Initial Value Problem}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+An \textbf{initial value problem} (IVP) is a type of differential equation problem that seeks to find a function satisfying a given differential equation along with specified initial conditions. Formally, an IVP can be expressed as follows:
+
+Given a differential equation of the form:
+
+\begin{equation}
+\frac{dy}{dt} = f(t, y)
+\end{equation}
+
+with an initial condition:
+
+\begin{equation}
+y(t_0) = y_0
+\end{equation}
+
+where $t_0$ is the initial time and $y_0$ is the initial value of the function $y(t)$, the goal is to find a function $y(t)$ that satisfies both the differential equation and the initial condition.
+
+\section{Examples}
+Consider the simple first-order linear ordinary differential equation:
+
+\begin{equation}
+\frac{dy}{dt} = 2y, \quad y(0) = 1.
+\end{equation}
+
+To solve this IVP, we can separate variables:
+
+\begin{equation}
+\frac{dy}{y} = 2 dt.
+\end{equation}
+
+Integrating both sides gives:
+
+\begin{equation}
+\ln |y| = 2t + C,
+\end{equation}
+
+where $C$ is the constant of integration. Exponentiating both sides results in:
+
+\begin{equation}
+y = e^{2t + C} = e^C e^{2t}.
+\end{equation}
+
+Letting $e^C = K$, we have:
+
+\begin{equation}
+y = K e^{2t}.
+\end{equation}
+
+Using the initial condition $y(0) = 1$, we find:
+
+\begin{equation}
+1 = K e^{0} \implies K = 1.
+\end{equation}
+
+Thus, the solution to the IVP is:
+
+\begin{equation}
+y(t) = e^{2t}.
+\end{equation}
+
+\section{Key Results}
+One of the fundamental results concerning initial value problems is the existence and uniqueness theorem, often attributed to Picard-Lindelöf. This theorem states that if $f(t, y)$ is continuous in a region around the point $(t_0, y_0)$ and satisfies a Lipschitz condition with respect to $y$, then there exists a unique solution $y(t)$ to the IVP in some interval around $t_0$.
+
+\begin{theorem}[Existence and Uniqueness]
+Let $f(t, y)$ be continuous in a rectangle $R = [t_0 - \delta, t_0 + \delta] \times [y_0 - \epsilon, y_0 + \epsilon]$ and satisfy the Lipschitz condition in $y$. Then there exists a unique function $y(t)$ defined on the interval $[t_0 - \delta, t_0 + \delta]$ such that:
+
+\begin{equation}
+\frac{dy}{dt} = f(t, y), \quad y(t_0) = y_0.
+\end{equation}
+\end{theorem}
+
+\section{Diagrams / Visual Description}
+To visualize an initial value problem, consider the graph of the function $y(t)$ in the $t-y$ plane. The initial condition $(t_0, y_0)$ is represented as a point on the graph. The solution curve, which is the trajectory of $y(t)$, starts at this point and follows the slope defined by the differential equation $\frac{dy}{dt} = f(t, y)$.
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{ivp_graph.png}
+\caption{Graph of an initial value problem showing the solution curve starting from the initial condition $(t_0, y_0)$.}
+\end{center}
+
+\section{Connections}
+Initial value problems are foundational in the study of differential equations and are closely related to boundary value problems, where conditions are specified at more than one point. IVPs are extensively used in various fields such as physics, engineering, and economics to model dynamic systems. The solutions to IVPs can also be analyzed using numerical methods, such as Euler's method or Runge-Kutta methods, especially when analytical solutions are difficult to obtain.
+
+\section{References}
+\begin{itemize}
+    \item D. Alayón-Solarz and C. J. Vanegas, "The Cauchy-Pompeiu integral formula in elliptic complex numbers," Complex Variables and Elliptic Equations, 57(9):1005-1020, 2010, doi:10.1080/17476933.2010.534155.
+    \item J. D. Cole, "On a quasi-linear parabolic equation occurring in aerodynamics," Quarterly of Applied Mathematics, 9, 225-236, 1951.
+    \item H. Uzawa, "Iterative Methods for Concave Programming," in Studies in Linear and Non-Linear Programming, K. J. Arrow, L. Hurwicz, and H. Uzawa (eds.), Stanford University Press, Stanford, 1958, 154-165.
+\end{itemize}\end{document}

@@ -1,0 +1,344 @@
+{
+  "themes": [
+    {
+      "id": "elliptic-systems",
+      "name": "Elliptic Systems and Structures",
+      "description": "This theme explores the mathematical framework of elliptic systems, focusing on the conditions and properties that define ellipticity. It includes the study of differential equations and structures that exhibit elliptic behavior.",
+      "key_concepts": [
+        "elliptic system",
+        "Ellipticity",
+        "ellipticity constant",
+        "principal symbol",
+        "Variable Elliptic Structures"
+      ],
+      "search_queries": [
+        "What are elliptic systems in mathematics?",
+        "Properties of elliptic differential equations",
+        "Ellipticity in mathematical structures"
+      ]
+    },
+    {
+      "id": "holomorphic-functions",
+      "name": "Holomorphic Functions and Complex Analysis",
+      "description": "This theme delves into the study of holomorphic functions, which are central to complex analysis. It covers their properties, applications, and the associated mathematical structures.",
+      "key_concepts": [
+        "holomorphic functions",
+        "Hol(U, C+)",
+        "complex Burgers equation",
+        "Generalized Cauchy\u2013Riemann Operators",
+        "Variable Cauchy\u2013Riemann System"
+      ],
+      "search_queries": [
+        "What are holomorphic functions?",
+        "Applications of complex analysis",
+        "Generalized Cauchy-Riemann equations"
+      ]
+    },
+    {
+      "id": "transport-phenomena",
+      "name": "Transport Phenomena in Mathematical Systems",
+      "description": "This theme investigates the transport phenomena within mathematical systems, focusing on how structures and functions move and transform under various conditions.",
+      "key_concepts": [
+        "Burgers transform",
+        "Universal Burgers Transport",
+        "transport obstruction G",
+        "Obstruction Field",
+        "transport-theoretic invariant"
+      ],
+      "search_queries": [
+        "Transport phenomena in mathematics",
+        "Burgers transform applications",
+        "Obstruction fields in elliptic systems"
+      ]
+    },
+    {
+      "id": "rigidity-and-structure",
+      "name": "Rigidity and Structural Analysis",
+      "description": "This theme explores the concept of rigidity in mathematical structures, examining how fixed and moving structures align and interact within various systems.",
+      "key_concepts": [
+        "Rigidity",
+        "rigid variable elliptic structures",
+        "Jacobian-twisted multiplicativity",
+        "Structure Polynomial",
+        "Canonical Spectral Parameter"
+      ],
+      "search_queries": [
+        "Rigidity in mathematical structures",
+        "Analysis of rigid elliptic structures",
+        "Jacobian-twisted multiplicativity in mathematics"
+      ]
+    },
+    {
+      "id": "differential-equations",
+      "name": "Differential Equations and Their Solutions",
+      "description": "This theme covers the study of differential equations, focusing on their formulation, solutions, and the initial value problems associated with them.",
+      "key_concepts": [
+        "initial value problem",
+        "first-order PDE",
+        "Inhomogeneous Coefficients",
+        "Product Rule",
+        "analytic data"
+      ],
+      "search_queries": [
+        "Solving differential equations",
+        "Initial value problems in mathematics",
+        "First-order PDEs and their applications"
+      ]
+    },
+    {
+      "id": "variable-elliptic-structures",
+      "name": "Variable Elliptic Structures",
+      "description": "This theme focuses on the study of variable elliptic structures, examining how ellipticity varies and the implications for mathematical analysis.",
+      "key_concepts": [
+        "Variable Elliptic Structures",
+        "rigid variable elliptic structures",
+        "Variable Cauchy\u2013Riemann System",
+        "ellipticity constant",
+        "Beltrami coefficient \u00b5"
+      ],
+      "search_queries": [
+        "Variable elliptic structures in mathematics",
+        "Ellipticity variation in complex systems",
+        "Beltrami coefficient applications"
+      ]
+    },
+    {
+      "id": "obstruction-theory",
+      "name": "Obstruction Theory in Mathematical Systems",
+      "description": "This theme investigates the concept of obstructions in mathematical systems, focusing on how they affect transport and transformation within these systems.",
+      "key_concepts": [
+        "transport obstruction G",
+        "Obstruction Field",
+        "obstruction formula",
+        "Universal Burgers Transport",
+        "f-analytics hierarchy"
+      ],
+      "search_queries": [
+        "Obstruction theory in mathematics",
+        "Transport obstructions in elliptic systems",
+        "Obstruction formula applications"
+      ]
+    },
+    {
+      "id": "spectral-analysis",
+      "name": "Spectral Analysis of Mathematical Operators",
+      "description": "This theme explores the spectral properties of mathematical operators, focusing on the analysis of their behavior and implications for mathematical systems.",
+      "key_concepts": [
+        "Canonical Spectral Parameter",
+        "principal symbol",
+        "Structure Polynomial",
+        "Jacobian-twisted multiplicativity",
+        "affine automorphisms"
+      ],
+      "search_queries": [
+        "Spectral analysis in mathematics",
+        "Properties of mathematical operators",
+        "Canonical spectral parameters"
+      ]
+    },
+    {
+      "id": "complex-structures",
+      "name": "Complex Structures and Their Transformations",
+      "description": "This theme examines complex structures in mathematics, focusing on their properties, transformations, and the conditions that affect their behavior.",
+      "key_concepts": [
+        "complex Burgers equation",
+        "holomorphic functions",
+        "Generalized Cauchy\u2013Riemann Operators",
+        "Beltrami coefficient \u00b5",
+        "affine automorphisms"
+      ],
+      "search_queries": [
+        "Complex structures in mathematics",
+        "Transformations of complex systems",
+        "Beltrami coefficient in complex analysis"
+      ]
+    },
+    {
+      "id": "analytic-functions",
+      "name": "Analytic Functions and Hierarchies",
+      "description": "This theme covers the study of analytic functions, focusing on their classification, properties, and the hierarchies that emerge from their analysis.",
+      "key_concepts": [
+        "analytic data",
+        "f-analytics hierarchy",
+        "Hol(U, C+)",
+        "C1 function",
+        "obstruction formula"
+      ],
+      "search_queries": [
+        "Analytic functions in mathematics",
+        "Hierarchy of analytic functions",
+        "Properties of C1 functions"
+      ]
+    },
+    {
+      "id": "bijective-transformations",
+      "name": "Bijective Transformations in Mathematical Systems",
+      "description": "This theme explores bijective transformations within mathematical systems, focusing on their properties and the implications for system behavior.",
+      "key_concepts": [
+        "Burgers transform",
+        "Universal Burgers Transport",
+        "Jacobian-twisted multiplicativity",
+        "affine automorphisms",
+        "transport-theoretic invariant"
+      ],
+      "search_queries": [
+        "Bijective transformations in mathematics",
+        "Properties of Burgers transform",
+        "Affine automorphisms in complex systems"
+      ]
+    },
+    {
+      "id": "calculus-techniques",
+      "name": "Calculus Techniques in Differential Analysis",
+      "description": "This theme focuses on calculus techniques used in the analysis of differential equations and systems, emphasizing their application and effectiveness.",
+      "key_concepts": [
+        "Product Rule",
+        "initial value problem",
+        "Inhomogeneous Coefficients",
+        "first-order PDE",
+        "C1 function"
+      ],
+      "search_queries": [
+        "Calculus techniques in differential equations",
+        "Product rule applications",
+        "Solving initial value problems"
+      ]
+    },
+    {
+      "id": "mathematical-invariants",
+      "name": "Mathematical Invariants in System Analysis",
+      "description": "This theme investigates the role of invariants in mathematical systems, focusing on their properties and how they aid in system analysis and solution.",
+      "key_concepts": [
+        "transport-theoretic invariant",
+        "Canonical Spectral Parameter",
+        "Jacobian-twisted multiplicativity",
+        "Structure Polynomial",
+        "affine automorphisms"
+      ],
+      "search_queries": [
+        "Mathematical invariants in system analysis",
+        "Role of invariants in mathematics",
+        "Transport-theoretic invariants"
+      ]
+    },
+    {
+      "id": "polynomial-structures",
+      "name": "Polynomial Structures in Mathematical Systems",
+      "description": "This theme explores the role of polynomial structures in mathematical systems, focusing on their properties and implications for system behavior.",
+      "key_concepts": [
+        "Structure Polynomial",
+        "Jacobian-twisted multiplicativity",
+        "Canonical Spectral Parameter",
+        "principal symbol",
+        "f-analytics hierarchy"
+      ],
+      "search_queries": [
+        "Polynomial structures in mathematics",
+        "Role of structure polynomials",
+        "Jacobian-twisted multiplicativity"
+      ]
+    },
+    {
+      "id": "differentiability",
+      "name": "Differentiability in Mathematical Functions",
+      "description": "This theme examines the concept of differentiability in mathematical functions, focusing on its implications for function behavior and system analysis.",
+      "key_concepts": [
+        "C1 function",
+        "holomorphic functions",
+        "analytic data",
+        "Product Rule",
+        "Generalized Cauchy\u2013Riemann Operators"
+      ],
+      "search_queries": [
+        "Differentiability in mathematical functions",
+        "Properties of C1 functions",
+        "Holomorphic function differentiability"
+      ]
+    },
+    {
+      "id": "system-coherence",
+      "name": "System Coherence in Elliptic Structures",
+      "description": "This theme investigates the coherence of systems within elliptic structures, focusing on how coherence affects system behavior and analysis.",
+      "key_concepts": [
+        "transport obstruction G",
+        "Obstruction Field",
+        "rigid variable elliptic structures",
+        "Ellipticity",
+        "Variable Elliptic Structures"
+      ],
+      "search_queries": [
+        "System coherence in elliptic structures",
+        "Coherence in mathematical systems",
+        "Transport obstruction in elliptic systems"
+      ]
+    },
+    {
+      "id": "parameter-analysis",
+      "name": "Parameter Analysis in Mathematical Systems",
+      "description": "This theme explores the role of parameters in mathematical systems, focusing on their analysis and how they affect system behavior and solutions.",
+      "key_concepts": [
+        "Canonical Spectral Parameter",
+        "ellipticity constant",
+        "Beltrami coefficient \u00b5",
+        "principal symbol",
+        "Inhomogeneous Coefficients"
+      ],
+      "search_queries": [
+        "Parameter analysis in mathematics",
+        "Role of parameters in system behavior",
+        "Ellipticity constant in differential equations"
+      ]
+    },
+    {
+      "id": "system-regularity",
+      "name": "System Regularity and Solvability",
+      "description": "This theme focuses on the regularity and solvability of mathematical systems, examining the conditions that ensure solutions and their implications.",
+      "key_concepts": [
+        "Ellipticity",
+        "initial value problem",
+        "analytic data",
+        "principal symbol",
+        "first-order PDE"
+      ],
+      "search_queries": [
+        "System regularity in mathematics",
+        "Solvability of differential equations",
+        "Ellipticity and system solutions"
+      ]
+    },
+    {
+      "id": "mathematical-transformations",
+      "name": "Mathematical Transformations and Their Implications",
+      "description": "This theme examines the role of transformations in mathematical systems, focusing on their properties and how they affect system behavior and analysis.",
+      "key_concepts": [
+        "Burgers transform",
+        "Universal Burgers Transport",
+        "affine automorphisms",
+        "Jacobian-twisted multiplicativity",
+        "complex Burgers equation"
+      ],
+      "search_queries": [
+        "Mathematical transformations in systems",
+        "Implications of Burgers transform",
+        "Affine automorphisms in mathematics"
+      ]
+    },
+    {
+      "id": "complex-differential-systems",
+      "name": "Complex Differential Systems and Equations",
+      "description": "This theme explores complex differential systems, focusing on their formulation, properties, and the equations that govern their behavior.",
+      "key_concepts": [
+        "complex Burgers equation",
+        "Generalized Cauchy\u2013Riemann Operators",
+        "Variable Cauchy\u2013Riemann System",
+        "holomorphic functions",
+        "first-order PDE"
+      ],
+      "search_queries": [
+        "Complex differential systems in mathematics",
+        "Properties of complex Burgers equation",
+        "Generalized Cauchy-Riemann systems"
+      ]
+    }
+  ]
+}

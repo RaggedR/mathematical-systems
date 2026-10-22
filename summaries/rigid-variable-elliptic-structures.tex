@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Rigid Variable Elliptic Structures}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+A \textbf{rigid variable elliptic structure} on the plane is defined as a variable elliptic structure characterized by the vanishing of its intrinsic obstruction field. Formally, let $\lambda: \Omega \to \mathbb{C}$ be a spectral parameter associated with a variable elliptic structure, where $\Omega \subset \mathbb{R}^2$. The structure is rigid if the following condition holds:
+
+\begin{equation}
+G = i x + i y = 0 \quad \text{on } \Omega,
+\end{equation}
+
+where $G$ is the intrinsic obstruction field. This condition indicates that the structure does not deviate from the constant theory, implying that the associated transport dynamics are conservative.
+
+\section{Examples}
+Consider the following examples of rigid variable elliptic structures:
+
+1. **Constant Structure**: If $\alpha$ and $\beta$ are constant, then the structure is trivially rigid. For instance, if $\alpha = 1$ and $\beta = 0$, the structure is given by the standard complex structure, which is rigid.
+
+2. **The $\epsilon$-family**: Let $f(\xi) = \xi + i\epsilon$ for $\epsilon > 0$. The corresponding rigid structure can be shown to satisfy the rigidity condition $\lambda_x + \lambda \lambda_y = 0$. This family illustrates that non-constant functions can yield rigid structures.
+
+3. **The $\delta$-family**: Define $f(\xi) = i\delta(\xi)$, where $\delta$ is a non-constant holomorphic function. The resulting structure maintains rigidity, as it adheres to the necessary conditions for the vanishing of the obstruction field.
+
+\section{Key Results}
+Several key results regarding rigid variable elliptic structures have been established:
+
+- **Rigidity and Analyticity**: A rigid elliptic structure $(\alpha, \beta)$ is real-analytic on the domain $\Omega \subset \mathbb{R}^2$. If $(\alpha, \beta)$ is $C^k$ for any finite $k$ but not $C^\omega$, then it cannot be rigid \cite{2602.19251}.
+
+- **Rigidity as Conservation**: A variable elliptic structure is rigid if and only if the associated Burgers transport law is conservative, which can be expressed as $\lambda_x + \lambda \lambda_y = 0$ \cite{2601.19274}.
+
+- **Rigidity-Flatness Theorem**: If a variable elliptic structure is both rigid and flat (having zero Gaussian curvature), then it must be constant. This result emphasizes the uniqueness of rigid structures in the context of elliptic geometry \cite{2601.19274}.
+
+\section{Diagrams / Visual Description}
+A visual representation of rigid variable elliptic structures can be illustrated using the complex plane. The structure can be depicted as a mapping from the upper half-plane to the unit disk, where the Beltrami coefficient $\mu$ is represented as a smooth map $\mu: \Omega \to D$, with $D = \{ \mu \in \mathbb{C} : |\mu| < 1 \}$. The rigidity condition corresponds to the center of the disk, where $\mu = 0$.
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{rigid_structure_diagram.png}
+\caption{Mapping of a rigid variable elliptic structure from the upper half-plane to the unit disk.}
+\end{center}
+
+\section{Connections}
+Rigid variable elliptic structures are closely related to several concepts in the mathematical landscape:
+
+- **Elliptic Functions**: These structures are associated with elliptic functions, which are periodic functions that can be expressed in terms of complex variables.
+
+- **Beltrami Equations**: The study of rigid structures often involves the analysis of Beltrami equations, which describe the deformation of complex structures.
+
+- **f-Analytics Hierarchy**: Rigid variable elliptic structures generalize the f-analytics hierarchy, providing a framework for understanding complex variable structures in a broader context.
+
+\section{References}
+\begin{itemize}
+    \item D. Alayón-Solarz, Variable Elliptic Structures on the Plane: Transport Dynamics, Rigidity, and Function Theory, preprint, arXiv:2601.19274, 2026.
+    \item D. Alayón-Solarz, Rigid Structures and Holomorphic Functions, preprint, arXiv:2602.19251, 2026.
+    \item K. Astala, T. Iwaniec, and G. Martin, Elliptic Partial Differential Equations and Quasi-conformal Mappings in the Plane, Princeton Mathematical Series 48, Princeton University Press, 2009.
+\end{itemize}\end{document}

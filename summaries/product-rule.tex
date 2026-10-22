@@ -1,0 +1,89 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Product Rule}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+The \textbf{Product Rule} is a fundamental theorem in calculus that provides a method for differentiating the product of two functions. Formally, if \( f(x) \) and \( g(x) \) are both differentiable functions, then the derivative of their product \( h(x) = f(x)g(x) \) is given by:
+
+\begin{equation}
+h'(x) = f'(x)g(x) + f(x)g'(x).
+\end{equation}
+
+This can be expressed in a more compact form as:
+
+\begin{equation}
+\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x).
+\end{equation}
+
+\section{Examples}
+To illustrate the Product Rule, consider the following examples:
+
+\subsection{Example 1: Polynomial Functions}
+Let \( f(x) = x^2 \) and \( g(x) = 3x + 1 \). We want to find the derivative of \( h(x) = f(x)g(x) = x^2(3x + 1) \).
+
+First, we compute the derivatives:
+- \( f'(x) = 2x \)
+- \( g'(x) = 3 \)
+
+Applying the Product Rule:
+
+\[
+h'(x) = f'(x)g(x) + f(x)g'(x) = (2x)(3x + 1) + (x^2)(3).
+\]
+
+Now simplifying:
+
+\[
+h'(x) = 6x^2 + 2x + 3x^2 = 9x^2 + 2x.
+\]
+
+\subsection{Example 2: Exponential and Trigonometric Functions}
+Let \( f(x) = e^x \) and \( g(x) = \sin(x) \). We want to find the derivative of \( h(x) = f(x)g(x) = e^x \sin(x) \).
+
+First, we compute the derivatives:
+- \( f'(x) = e^x \)
+- \( g'(x) = \cos(x) \)
+
+Applying the Product Rule:
+
+\[
+h'(x) = f'(x)g(x) + f(x)g'(x) = e^x \sin(x) + e^x \cos(x).
+\]
+
+Factoring out \( e^x \):
+
+\[
+h'(x) = e^x (\sin(x) + \cos(x)).
+\]
+
+\section{Key Results}
+The Product Rule is essential in various fields of mathematics and applied sciences. It is particularly useful in the context of differential equations and physics, where products of functions frequently arise. 
+
+One important result related to the Product Rule is its extension to higher derivatives, known as the Leibniz Rule. For the \( n \)-th derivative of a product of two functions, the rule states:
+
+\begin{equation}
+\frac{d^n}{dx^n}[f(x)g(x)] = \sum_{k=0}^{n} \binom{n}{k} f^{(k)}(x) g^{(n-k)}(x),
+\end{equation}
+
+where \( f^{(k)}(x) \) and \( g^{(n-k)}(x) \) denote the \( k \)-th and \( (n-k) \)-th derivatives of \( f \) and \( g \), respectively.
+
+\section{Diagrams / Visual Description}
+The Product Rule can be visualized graphically by considering the slopes of the tangent lines to the curves of \( f(x) \) and \( g(x) \). The derivative \( h'(x) \) represents the rate of change of the area under the curve \( h(x) = f(x)g(x) \) as \( x \) varies. 
+
+A diagram illustrating the functions \( f(x) \), \( g(x) \), and their product \( h(x) \) can help visualize how the slopes of \( f \) and \( g \) contribute to the slope of \( h \).
+
+\section{Connections}
+The Product Rule is closely related to other differentiation rules, such as the Chain Rule and the Quotient Rule. The Chain Rule is used when differentiating compositions of functions, while the Quotient Rule is used for the division of functions. 
+
+Additionally, the Product Rule is foundational for understanding more complex operations in calculus, such as implicit differentiation and the differentiation of vector-valued functions.
+
+\section{References}
+\begin{itemize}
+    \item D. Alayón-Solarz and C. J. Vanegas, "The Cauchy-Pompeiu integral formula in elliptic complex numbers," Complex Variables and Elliptic Equations, 57(9):1005-1020, 2010, doi:10.1080/17476933.2010.534155.
+    \item D. Alayón-Solarz and C. J. Vanegas, "Operators associated to the Cauchy-Riemann operator in elliptic complex numbers," Adv. Appl. Clifford Algebras 22, 257-270 (2012), doi:10.1007/s00006-011-0306-4.
+    \item W. Tutschke and C. J. Vanegas, "General Algebraic Structures of Clifford Type and Cauchy-Pompeiu Formulae for Some Piecewise Constant Structure Relations," Adv. Appl. Clifford Algebras 21, 829-838 (2011), doi:10.1007/s00006-011-0282-8.
+\end{itemize}\end{document}

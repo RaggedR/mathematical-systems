@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Transport Obstruction G}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+The transport obstruction \( G \) is a mathematical quantity that measures the failure of a variable elliptic structure to be transported coherently with respect to its own multiplication law. Formally, it is defined as:
+
+\begin{equation}
+G := i_x + i_y,
+\end{equation}
+
+where \( i_x \) and \( i_y \) are the derivatives of the generator \( i(x, y) \) associated with the elliptic structure. The obstruction \( G \) vanishes identically when the structure is termed \textit{rigid}, which is expressed as:
+
+\begin{equation}
+i_x + i_y = 0 \quad \text{on } \Omega.
+\end{equation}
+
+This condition is intrinsic and purely geometric, indicating that the generator \( i(x, y) \) behaves holomorphically with respect to its own variable elliptic structure.
+
+\section{Examples}
+Consider a variable elliptic structure defined by the polynomial:
+
+\[
+X^2 + \beta(x, y) X + \alpha(x, y) = 0,
+\]
+
+where \( \alpha \) and \( \beta \) are functions of \( x \) and \( y \). The generator \( i(x, y) \) satisfies the structure relation:
+
+\[
+i^2 + \beta i + \alpha = 0.
+\]
+
+To compute the obstruction \( G \), we differentiate \( i \) with respect to \( x \) and \( y \):
+
+1. Compute \( i_x \) and \( i_y \) using implicit differentiation of the structure relation.
+2. Substitute these derivatives into the expression for \( G \).
+
+If, for example, we find that \( G \equiv 0 \) in a certain region \( \Omega \), this indicates that the structure is rigid in that region, allowing for a coherent analytic function theory to emerge.
+
+\section{Key Results}
+The concept of transport obstruction \( G \) is pivotal in understanding the dynamics of variable elliptic structures. Notable findings include:
+
+- **Rigidity Condition**: A variable elliptic structure is rigid if \( G \equiv 0 \), which corresponds to the conservative case of the Burgers transport law \( \lambda_x + \lambda \lambda_y = 0 \) (Alayón-Solarz, 2026) \cite{2601.19274v4}.
+- **Beltrami Coefficient Relation**: The rigidity condition can be expressed in terms of the Beltrami coefficient \( \mu \) as \( \overline{\mu}_z = \mu \mu_z \) (Theorem 12.1, Alayón-Solarz, 2026) \cite{2601.19274v4}.
+- **Normalized Obstruction**: The normalized obstruction \( \rho_T \) that controls rigidization convergence is given by:
+
+\[
+\rho_T \leq 4 \|R(\mu)\|_\infty \cdot \|1 - \mu\|_\infty \cdot (1 - \|\mu\|_\infty^2)^{-2},
+\]
+
+where \( R(\mu) \) is the Poincaré residual (Proposition 12.8, Alayón-Solarz, 2026) \cite{2601.19274v4}.
+
+\section{Diagrams / Visual Description}
+To visualize the concept of transport obstruction \( G \), consider a diagram depicting the variable elliptic structure on the complex plane. The structure can be represented as a surface where the values of \( \alpha \) and \( \beta \) vary. The obstruction \( G \) can be illustrated as a vector field on this surface, indicating regions of rigidity (where \( G = 0 \)) and non-rigidity (where \( G \neq 0 \)). 
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{elliptic_structure_diagram.png}
+\end{center}
+
+\section{Connections}
+The transport obstruction \( G \) is closely related to several concepts in the field of complex analysis and differential geometry:
+
+- **Elliptic Systems**: \( G \) is directly tied to the behavior of elliptic systems, where it measures the compatibility of the system's structure with its differential equations.
+- **Beltrami Coefficients**: The relationship between \( G \) and the Beltrami coefficient \( \mu \) provides a bridge between the theory of variable elliptic structures and classical hyperbolic geometry.
+- **Cauchy-Riemann Systems**: The presence of \( G \) influences the inhomogeneity of generalized Cauchy-Riemann systems, affecting the existence and uniqueness of solutions to these systems.
+
+\section{References}
+\begin{itemize}
+    \item Alayón-Solarz, D. (2026). Variable Elliptic Structures on the Plane: Transport Dynamics, Rigidity, and Function Theory. arXiv:2601.19274v4.
+\end{itemize}\end{document}

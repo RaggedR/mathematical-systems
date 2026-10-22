@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Ellipticity Constant}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+The \textbf{ellipticity constant} is a parameter that quantifies the degree of ellipticity of a system, particularly in the context of partial differential equations (PDEs). Formally, for a first-order system represented by a complex function $\lambda(x, y)$, the ellipticity condition is often expressed in terms of the discriminant $\Delta$ of the system. The ellipticity constant can be defined as follows:
+
+\begin{equation}
+\Delta = 4\alpha - \beta^2,
+\end{equation}
+
+where $\alpha$ and $\beta$ are derived from the coefficients of the system. The system is considered elliptic if $\Delta > 0$ throughout the domain of interest.
+
+\section{Examples}
+Consider a first-order system defined on the half-plane $\Omega = \{(x, y) : x > -1\}$ given by:
+
+\begin{equation}
+\begin{aligned}
+u_x - y^2 + \frac{\delta^2}{(1 + x)^2} v_y &= 0, \\
+v_x + u_y + \frac{2y}{1 + x} v_y &= 0.
+\end{aligned}
+\end{equation}
+
+In this case, the ellipticity constant can be analyzed as $\delta$ varies. For small $\delta$, the ellipticity constant degenerates, indicating that the system may become ill-posed for certain numerical methods. However, for $\delta > 0$, the system remains elliptic, and the ellipticity condition $\Delta > 0$ holds.
+
+\section{Key Results}
+The ellipticity constant plays a crucial role in determining the solvability of PDEs. Alayón-Solarz (2026) demonstrated that for a family of first-order systems, the ellipticity constant can degenerate to zero as $\delta \to 0$, leading to significant challenges for numerical solvers. Specifically, the condition number $\kappa_\delta$ associated with the ellipticity constant satisfies:
+
+\begin{equation}
+\kappa_\delta = O(\delta^{-2}),
+\end{equation}
+
+indicating that as $\delta$ approaches zero, the numerical stability of the system deteriorates, making it increasingly difficult to solve using standard elliptic methods \cite{2602.19251v1}.
+
+\section{Diagrams / Visual Description}
+To visualize the concept of ellipticity, consider the domain $\Omega$ in the $(x, y)$ plane. The boundary at $x = -1$ represents a critical point where the Jacobian of the system vanishes, leading to potential shock formation. The ellipticity constant can be depicted as a function of $\delta$, showing regions of ellipticity (where $\Delta > 0$) and degeneracy (where $\Delta \leq 0$).
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{ellipticity_diagram.png}
+\caption{Ellipticity regions in the $(x, y)$ plane as a function of the ellipticity constant $\delta$.}
+\end{center}
+
+\section{Connections}
+The concept of the ellipticity constant is closely related to the notion of elliptic systems in the theory of PDEs. An elliptic system is characterized by the property that solutions exhibit certain regularity and stability properties. The ellipticity constant serves as a measure of how far a given system is from being elliptic. Additionally, it connects to other concepts such as the Beltrami coefficient, which measures the deviation from the standard complex structure, and the transport obstruction, which indicates whether the structure moves coherently with respect to its multiplication law.
+
+\section{References}
+\begin{itemize}
+    \item Alayón-Solarz, D. (2026). Variable Elliptic Structures on the Plane: Transport Dynamics, Rigidity, and Function Theory. arXiv:2602.19251v1.
+\end{itemize}\end{document}

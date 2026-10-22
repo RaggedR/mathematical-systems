@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Jacobian Twisted Multiplicativity}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+Jacobian-twisted multiplicativity is a property of the propagator $P_f$ associated with the Burgers transform, which describes how the propagator behaves under the multiplication of functions in the context of a deformed algebra. Formally, for any two functions $h_1, h_2 \in T_f \text{Hol}(U, \mathbb{C}^+)$, the Jacobian-twisted multiplicativity can be expressed as:
+
+\begin{equation}
+P_f[h_1 \cdot h_2] = J_f \cdot P_f[h_1] \cdot P_f[h_2],
+\end{equation}
+
+where the product on both sides is pointwise, and $J_f$ is the characteristic Jacobian defined as:
+
+\begin{equation}
+J_f = 1 + f'(w_0) x,
+\end{equation}
+
+with $w_0 = y - \lambda_0(x, y) x$ being the characteristic coordinate. This property indicates that the propagator does not satisfy a simple bilinear operation independent of the variable $x$, reflecting the deformation of the seed algebra.
+
+\section{Examples}
+Consider two functions $h_1$ and $h_2$ in the space of holomorphic functions. Let us take:
+
+\[
+h_1(w) = e^{w}, \quad h_2(w) = \sin(w).
+\]
+
+To compute the propagator for the product $h_1 \cdot h_2$, we first calculate:
+
+\[
+P_f[h_1 \cdot h_2] = P_f[e^{w} \cdot \sin(w)].
+\]
+
+Using the Jacobian-twisted multiplicativity property, we find:
+
+\[
+P_f[h_1 \cdot h_2] = J_f \cdot P_f[h_1] \cdot P_f[h_2].
+\]
+
+Assuming we have computed $P_f[h_1]$ and $P_f[h_2]$, we can substitute these values into the equation. For instance, if:
+
+\[
+P_f[h_1] = \frac{e^{w_0}}{J_f}, \quad P_f[h_2] = \frac{\sin(w_0)}{J_f},
+\]
+
+then:
+
+\[
+P_f[h_1 \cdot h_2] = J_f \cdot \left(\frac{e^{w_0}}{J_f}\right) \cdot \left(\frac{\sin(w_0)}{J_f}\right) = \frac{e^{w_0} \sin(w_0)}{J_f}.
+\]
+
+This illustrates how the Jacobian-twisted multiplicativity modifies the behavior of the propagator when functions are multiplied.
+
+\section{Key Results}
+The Jacobian-twisted multiplicativity was established in Theorem 7.9 of the paper by [Author, Year] as a significant result in the study of the Burgers transform. This theorem highlights that the propagator $P_f$ behaves in a non-standard way under multiplication, specifically:
+
+\[
+P_f[h_1 \cdot h_2] = J_f \cdot P_f[h_1] \cdot P_f[h_2],
+\]
+
+indicating that the presence of the Jacobian $J_f$ is crucial in maintaining the structure of the algebra under the operation of multiplication. This result has implications for understanding the dynamics described by the Burgers equation and the associated algebraic structures.
+
+\section{Diagrams / Visual Description}
+A visual representation of the Jacobian-twisted multiplicativity can be depicted as follows:
+
+1. **Function Space**: Consider a two-dimensional plane where the x-axis represents the variable $x$ and the y-axis represents the function values.
+2. **Jacobian Influence**: Draw curves representing $h_1$, $h_2$, and their product $h_1 \cdot h_2$. The Jacobian $J_f$ can be illustrated as a scaling factor that modifies the height of the product curve relative to the individual curves.
+3. **Multiplicative Interaction**: Use arrows to indicate how the product of the two functions is influenced by the Jacobian, showing that the resulting curve is not merely the product of the heights of the individual curves but is adjusted by the Jacobian factor.
+
+\section{Connections}
+Jacobian-twisted multiplicativity is closely related to several concepts in the field of mathematical analysis and differential equations, particularly in the study of nonlinear dynamics and the Burgers equation. It connects to:
+
+- **Burgers Transform**: The Jacobian-twisted multiplicativity is a fundamental property that arises in the context of the Burgers transform, which is used to study shock waves and other phenomena in fluid dynamics.
+- **Algebraic Structures**: The property indicates a deformation of the algebraic structure governing the functions involved, leading to insights into how nonlinear interactions can be modeled.
+- **Holomorphic Functions**: The functions $h_1$ and $h_2$ belong to the space of holomorphic functions, linking this concept to complex analysis.
+
+\section{References}
+- [Author, Year]. Title of the paper. arXiv:2602.19251v1.
+- [Author, Year]. Title of the paper. arXiv:2601.19274v4.\end{document}

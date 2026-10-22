@@ -1,0 +1,56 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Rigidity}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+Rigidity is a mathematical condition that describes the alignment of fixed and moving complex structures in a specific manner. Formally, a structure is termed \textit{rigid} if the intrinsic obstruction, denoted as 
+
+\begin{equation}
+G = ix + i iy,
+\end{equation}
+
+vanishes identically, i.e., 
+
+\begin{equation}
+G \equiv 0.
+\end{equation}
+
+Here, $i(x, y)$ is a generator of a variable elliptic structure defined on a domain $\Omega \subset \mathbb{R}^2$. The condition of rigidity implies that the structure can be transported without distortion in the context of the underlying geometry.
+
+\section{Examples}
+A classic example of rigidity can be found in the context of the $\delta$-family of structures. For every $\delta > 0$, the transport obstruction $G$ vanishes identically, confirming that the structure is rigid. Specifically, if we define:
+
+\begin{equation}
+\lambda = -\beta + i \frac{\sqrt{4\alpha - \beta^2}}{2},
+\end{equation}
+
+the condition $G = 0$ is equivalent to the conservative Burgers equation:
+
+\begin{equation}
+\lambda_x + \lambda \lambda_y = 0.
+\end{equation}
+
+This illustrates that the rigidity condition can be verified through the structure coefficients $\alpha$ and $\beta$ alone, without needing the spectral parameter $\lambda$.
+
+\section{Key Results}
+One of the significant results regarding rigidity is the Rigidity-Flatness Theorem, which states that rigidity and flatness are independent layers of geometric triviality. Specifically, if both conditions hold simultaneously, the structure is constrained from two directions: 
+
+1. The transport layer eliminates all $x$-derivatives in favor of $y$-derivatives.
+2. Metric flatness forces the $y$-derivatives to vanish as well.
+
+This theorem was established in the work of the authors in \cite{arxiv:2601.19274}.
+
+\section{Diagrams / Visual Description}
+To visualize rigidity, consider a two-dimensional domain $\Omega$ where the complex structure is represented by a variable elliptic structure. The condition $G \equiv 0$ can be illustrated as a flat plane where the transport of structures occurs without any distortion. The vanishing of $G$ signifies that the structure can be represented in local isothermal coordinates, where the complex structure becomes constant.
+
+\section{Connections}
+Rigidity is closely related to several other mathematical concepts, particularly in the realm of complex geometry and differential equations. It is linked to the notion of \textit{universal Burgers transport}, which deals with the transport dynamics of structures in a fixed background frame. Furthermore, rigidity implies the existence of an \textit{obstruction field}, which measures the failure of the structure to be parallel relative to a fixed flat connection. This relationship highlights the intrinsic nature of rigidity in governing the kinematics of variable algebraic structures.
+
+\section{References}
+\begin{itemize}
+    \item \cite{arxiv:2601.19274}
+\end{itemize}\end{document}

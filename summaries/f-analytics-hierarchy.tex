@@ -1,0 +1,61 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{F Analytics Hierarchy}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+The \textbf{f-analytics hierarchy} is a classification of functions based on their complexity and the resulting structures that arise from them. Formally, we define the f-analytics hierarchy as follows:
+
+Let $\mathcal{F}$ be a set of functions defined on a domain $\Omega \subset \mathbb{C}$. A function $f \in \mathcal{F}$ is said to be \textbf{f-analytic} if it satisfies certain rigidity conditions that allow it to be compatible with a given structure. The hierarchy is characterized by the order of the functions, where functions of lower order exhibit simpler structures, while those of higher order demonstrate increased complexity.
+
+The f-analytics hierarchy can be formally expressed as:
+$$
+\mathcal{H}_k = \{ f \in \mathcal{F} : \text{order}(f) \leq k \}
+$$
+for $k \in \mathbb{N}$, where $\text{order}(f)$ is a measure of the complexity of the function $f$ in relation to the rigidity conditions imposed by the structure.
+
+\section{Examples}
+To illustrate the f-analytics hierarchy, consider the following examples:
+
+1. **Linear Functions**: Let $f(x) = ax + b$, where $a, b \in \mathbb{C}$. This function is of order 1 and belongs to $\mathcal{H}_1$. It exhibits a simple linear structure and is compatible with the rigidity conditions.
+
+2. **Exponential Functions**: Let $f(x) = e^{cx}$ for some constant $c \in \mathbb{C}$. This function is of order 1 as well, thus $f \in \mathcal{H}_1$. Its structure is more complex than that of linear functions due to its exponential growth.
+
+3. **Polynomial Functions**: Consider $f(x) = x^n$ for $n \in \mathbb{N}$. The order of this function is $n$, so $f \in \mathcal{H}_n$. As $n$ increases, the complexity of the function and its associated structure increases.
+
+4. **Rational Functions**: Let $f(x) = \frac{p(x)}{q(x)}$, where $p(x)$ and $q(x)$ are polynomials. The order of $f$ is determined by the degrees of $p$ and $q$. If $\deg(p) = m$ and $\deg(q) = n$, then the order of $f$ is $\max(m, n)$.
+
+\section{Key Results}
+Several important findings have emerged regarding the f-analytics hierarchy:
+
+- **Necessity Theorem**: The f-analytics hierarchy is the largest class of seeds compatible with rigidity, as established in \cite{2602.19251v1}. This theorem asserts that any function that satisfies the rigidity conditions must belong to this hierarchy.
+
+- **Rigidity Emergence**: The transition from $p(x)$-analytics to f-analytics parallels the transition from real to complex analysis, indicating that rigidity is an emergent phenomenon when the spectral parameter is allowed to vary \cite{2601.19274v4}.
+
+- **Independence Theorem**: The Fundamental Independence Theorem demonstrates that certain zeroth-order invariants cannot distinguish between rigid and non-rigid structures, highlighting the importance of the f-analytics hierarchy in understanding these distinctions \cite{2601.19274v4}.
+
+\section{Diagrams / Visual Description}
+The f-analytics hierarchy can be visualized as a layered structure, where each layer corresponds to a different order of functions. The base layer consists of linear functions, while higher layers include polynomial, exponential, and rational functions. Each layer exhibits increasing complexity, with functions in higher layers being more sensitive to the rigidity conditions imposed by the structure.
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{f-analytics_hierarchy.png}
+\caption{Visual representation of the f-analytics hierarchy.}
+\end{center}
+
+\section{Connections}
+The f-analytics hierarchy is closely related to several other concepts in the mathematical landscape:
+
+- **Rigid Variable Elliptic Structures**: The f-analytics hierarchy generalizes the concept of rigid variable elliptic structures, providing a broader framework for understanding the behavior of functions under rigidity conditions.
+
+- **Complex Analysis**: The transition from $p(x)$-analytics to f-analytics reflects a deeper connection to complex analysis, where the treatment of the imaginary unit as a variable rather than a constant leads to richer structures.
+
+- **Quasiconformal Methods**: The results derived from the f-analytics hierarchy have implications for quasiconformal methods, particularly in the context of solving elliptic partial differential equations.
+
+\section{References}
+\begin{itemize}
+    \item \cite{2602.19251v1}
+    \item \cite{2601.19274v4}
+\end{itemize}\end{document}

@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Holomorphic Functions}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+A function \( f: U \subset \mathbb{C} \to \mathbb{C} \) is called \textbf{holomorphic} on an open set \( U \) if it is complex differentiable at every point in \( U \). More formally, \( f \) is holomorphic if for every point \( z_0 \in U \), the limit
+
+\begin{equation}
+\lim_{z \to z_0} \frac{f(z) - f(z_0)}{z - z_0}
+\end{equation}
+
+exists. This limit defines the derivative \( f'(z_0) \). A function is holomorphic in a neighborhood of every point in its domain, meaning it is complex differentiable in some open disk around each point.
+
+Holomorphic functions satisfy the Cauchy-Riemann equations, which are necessary and sufficient conditions for differentiability in the complex sense. If \( f(z) = u(x, y) + iv(x, y) \) where \( z = x + iy \), then the Cauchy-Riemann equations state:
+
+\begin{equation}
+\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \quad \text{and} \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}.
+\end{equation}
+
+\section{Examples}
+1. **Polynomial Functions**: Any polynomial \( f(z) = a_n z^n + a_{n-1} z^{n-1} + \ldots + a_1 z + a_0 \) where \( a_i \in \mathbb{C} \) is holomorphic everywhere in \( \mathbb{C} \).
+
+2. **Exponential Function**: The function \( f(z) = e^z \) is holomorphic everywhere in \( \mathbb{C} \). Its derivative is \( f'(z) = e^z \), which is also holomorphic.
+
+3. **Trigonometric Functions**: The sine and cosine functions, defined as \( f(z) = \sin(z) \) and \( g(z) = \cos(z) \), are holomorphic everywhere in \( \mathbb{C} \).
+
+4. **Rational Functions**: The function \( f(z) = \frac{1}{z} \) is holomorphic on \( \mathbb{C} \setminus \{0\} \) (it is not defined at \( z = 0 \)).
+
+5. **Complex Logarithm**: The function \( f(z) = \log(z) \) is holomorphic on \( \mathbb{C} \setminus \{0\} \) but has a branch cut, typically along the negative real axis.
+
+\section{Key Results}
+- **Cauchy's Integral Theorem**: If \( f \) is holomorphic on a simply connected domain \( D \), then for any closed contour \( C \) in \( D \):
+
+\begin{equation}
+\oint_C f(z) \, dz = 0.
+\end{equation}
+
+- **Cauchy's Integral Formula**: If \( f \) is holomorphic inside and on some simple closed contour \( C \), then for any point \( a \) inside \( C \):
+
+\begin{equation}
+f(a) = \frac{1}{2\pi i} \oint_C \frac{f(z)}{z - a} \, dz.
+\end{equation}
+
+- **Liouville's Theorem**: A bounded entire function (holomorphic on all of \( \mathbb{C} \)) must be constant.
+
+- **Maximum Modulus Principle**: If \( f \) is holomorphic in a domain \( D \), then the maximum of \( |f(z)| \) occurs on the boundary of \( D \).
+
+\section{Diagrams / Visual Description}
+Holomorphic functions can be visualized in the complex plane. The mapping of a holomorphic function can be represented by arrows indicating the transformation of points in the domain to points in the codomain. For example, the function \( f(z) = z^2 \) maps circles centered at the origin to circles in the \( w \)-plane, but the radius of these circles changes, demonstrating the local behavior of holomorphic functions.
+
+\section{Connections}
+Holomorphic functions are closely related to several important concepts in complex analysis:
+
+- **Cauchy-Riemann Equations**: These equations provide the necessary conditions for a function to be holomorphic, linking real and imaginary parts of complex functions.
+
+- **Burgers Transform**: This is a transformation that relates holomorphic functions to solutions of certain partial differential equations, emphasizing the interplay between complex analysis and fluid dynamics.
+
+- **C1 Functions**: Holomorphic functions are infinitely differentiable (smooth), which implies they are \( C^1 \) functions.
+
+- **Obstruction Formula**: The study of holomorphic functions often involves understanding obstructions to extending holomorphic structures, particularly in complex geometry.
+
+\section{References}
+- Alayón-Solarz, D. (2023). "Variable Elliptic Structures on the Plane: Definitions." arXiv:2601.19274v4.
+- Alayón-Solarz, D. (2023). "Covariantly Holomorphic Functions and the Cauchy–Pompeiu Formula." arXiv:2602.19251v1.\end{document}

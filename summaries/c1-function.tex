@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{C1 Function}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+A function is classified as a \textbf{C1 function} if it is continuously differentiable. Formally, a function \( f: \mathbb{R}^n \to \mathbb{R}^m \) is said to be a \( C^1 \) function if:
+\begin{itemize}
+    \item \( f \) is continuous on its domain.
+    \item The first derivatives of \( f \), denoted \( \frac{\partial f}{\partial x_i} \) for \( i = 1, 2, \ldots, n \), exist and are continuous on the domain.
+\end{itemize}
+In mathematical notation, this can be expressed as:
+\[
+f \in C^1(U) \quad \text{if} \quad f \text{ is continuous on } U \text{ and } \frac{\partial f}{\partial x_i} \text{ is continuous on } U \text{ for all } i.
+\]
+
+\section{Examples}
+Consider the following examples of \( C^1 \) functions:
+
+1. **Linear Function**: 
+   \[
+   f(x) = 2x + 3
+   \]
+   The derivative \( f'(x) = 2 \) is constant and thus continuous. Therefore, \( f \) is a \( C^1 \) function.
+
+2. **Quadratic Function**: 
+   \[
+   f(x) = x^2 + 3x + 5
+   \]
+   The derivative \( f'(x) = 2x + 3 \) is a polynomial, hence continuous. Thus, \( f \) is also a \( C^1 \) function.
+
+3. **Trigonometric Function**: 
+   \[
+   f(x) = \sin(x)
+   \]
+   The derivative \( f'(x) = \cos(x) \) is continuous for all \( x \). Therefore, \( f \) is a \( C^1 \) function.
+
+4. **Piecewise Function**: 
+   \[
+   f(x) = 
+   \begin{cases} 
+   x^2 & \text{if } x < 0 \\
+   2x + 1 & \text{if } x \geq 0 
+   \end{cases}
+   \]
+   To check if \( f \) is \( C^1 \), we need to ensure continuity at \( x = 0 \) and that the derivatives match:
+   \[
+   f(0^-) = 0^2 = 0, \quad f(0^+) = 2(0) + 1 = 1 \quad \Rightarrow \text{not continuous at } x = 0.
+   \]
+   Hence, \( f \) is not a \( C^1 \) function.
+
+\section{Key Results}
+The following results are significant in the study of \( C^1 \) functions:
+
+- **Theorem (Implicit Function Theorem)**: If \( f \) is a \( C^1 \) function and satisfies certain conditions, then there exists a unique \( C^1 \) function \( g \) such that \( g(y) = f^{-1}(y) \) locally around a point. This theorem is crucial in applications involving differential equations and optimization problems \cite{arxiv:2602.19251}.
+
+- **Regularity of Solutions**: If \( f \) is \( C^1 \) and satisfies a differential equation, then the solution to that equation is also \( C^1 \) under appropriate conditions. This is particularly relevant in the context of elliptic partial differential equations \cite{arxiv:2601.19274}.
+
+\section{Diagrams / Visual Description}
+To visualize \( C^1 \) functions, consider the following:
+
+- **Graph of a \( C^1 \) Function**: The graph of a \( C^1 \) function is smooth, with no sharp corners or cusps. The tangent line at any point on the graph can be drawn without lifting the pencil, indicating that the first derivative exists and is continuous.
+
+- **Continuity of Derivative**: A plot showing a \( C^1 \) function alongside its derivative can illustrate the continuity of the derivative. For instance, the graph of \( f(x) = \sin(x) \) and its derivative \( f'(x) = \cos(x) \) would show both curves being smooth and continuous.
+
+\section{Connections}
+The concept of \( C^1 \) functions is closely related to several other areas in mathematics:
+
+- **Holomorphic Functions**: Every holomorphic function is infinitely differentiable, and thus \( C^\infty \). However, not all \( C^1 \) functions are holomorphic. The relationship is significant in complex analysis where holomorphic functions imply certain regularity conditions \cite{arxiv:2602.19251}.
+
+- **Sobolev Spaces**: The space \( W^{1,p} \) consists of functions whose first derivatives are in \( L^p \), which generalizes the concept of \( C^1 \) functions in the context of weak derivatives. This is particularly useful in the study of partial differential equations.
+
+- **Differential Equations**: The solutions to many ordinary and partial differential equations are required to be \( C^1 \) to ensure the existence and uniqueness of solutions, as well as to apply the implicit function theorem effectively.
+
+\section{References}
+\begin{itemize}
+    \item D. Alayón-Solarz, "A degenerate elliptic system solvable by transport: a cautionary example," preprint, 2026. \cite{arxiv:2602.19251}
+    \item D. Alayón-Solarz, "Variable elliptic structures on the plane: Definitions," preprint, 2026. \cite{arxiv:2601.19274}
+\end{itemize}\end{document}

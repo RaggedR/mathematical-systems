@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "created": "2026-03-06 22:11:43",
+    "total_concepts": 30,
+    "total_edges": 17,
+    "total_papers": 3
+  },
+  "concepts": [
+    {
+      "name": "variable elliptic structures",
+      "display_name": "Variable Elliptic Structures",
+      "type": "definition",
+      "description": "A mathematical framework for analyzing structures that vary in ellipticity on the plane.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "structure polynomial",
+      "display_name": "Structure Polynomial",
+      "type": "object",
+      "description": "A polynomial that describes the structure of a variable elliptic system.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "ellipticity",
+      "display_name": "Ellipticity",
+      "type": "object",
+      "description": "A property of differential operators that ensures certain regularity and solvability conditions.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "generalized cauchy\u2013riemann operators",
+      "display_name": "Generalized Cauchy\u2013Riemann Operators",
+      "type": "object",
+      "description": "Operators that generalize the classical Cauchy-Riemann equations in complex analysis.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "variable cauchy\u2013riemann system",
+      "display_name": "Variable Cauchy\u2013Riemann System",
+      "type": "object",
+      "description": "A system of equations that extends the Cauchy-Riemann equations to variable elliptic structures.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "universal burgers transport",
+      "display_name": "Universal Burgers Transport",
+      "type": "theorem",
+      "description": "A theorem that describes transport phenomena in the context of variable elliptic structures.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "rigidity",
+      "display_name": "Rigidity",
+      "type": "definition",
+      "description": "A condition where the fixed and moving complex structures align in a specific manner.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "canonical spectral parameter",
+      "display_name": "Canonical Spectral Parameter",
+      "type": "object",
+      "description": "A parameter used in the analysis of spectral properties of differential operators.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "obstruction field",
+      "display_name": "Obstruction Field",
+      "type": "object",
+      "description": "A field that represents the obstructions to certain transport phenomena in the system.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "product rule",
+      "display_name": "Product Rule",
+      "type": "technique",
+      "description": "A rule in calculus that describes how to differentiate products of functions.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "inhomogeneous coefficients",
+      "display_name": "Inhomogeneous Coefficients",
+      "type": "object",
+      "description": "Coefficients in differential equations that do not have a uniform structure.",
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "name": "elliptic system",
+      "display_name": "elliptic system",
+      "type": "definition",
+      "description": "A system of partial differential equations that satisfies the ellipticity condition.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "ellipticity constant",
+      "display_name": "ellipticity constant",
+      "type": "object",
+      "description": "A parameter that indicates the degree of ellipticity of a system.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "transport-theoretic invariant",
+      "display_name": "transport-theoretic invariant",
+      "type": "object",
+      "description": "An invariant that helps in solving the elliptic system by transport methods.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "transport obstruction g",
+      "display_name": "transport obstruction G",
+      "type": "object",
+      "description": "A measure that indicates whether the structure of the elliptic system moves coherently.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "beltrami coefficient \u00b5",
+      "display_name": "Beltrami coefficient \u00b5",
+      "type": "object",
+      "description": "A coefficient that measures the distance from the standard complex structure.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "principal symbol",
+      "display_name": "principal symbol",
+      "type": "object",
+      "description": "A matrix associated with a differential operator that helps determine the ellipticity of the system.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "first-order pde",
+      "display_name": "first-order PDE",
+      "type": "object",
+      "description": "Partial differential equations that involve only first derivatives.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "initial value problem",
+      "display_name": "initial value problem",
+      "type": "definition",
+      "description": "A problem that seeks to find a solution to a differential equation given initial conditions.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "analytic data",
+      "display_name": "analytic data",
+      "type": "object",
+      "description": "Data that is smooth and can be represented by a convergent power series.",
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "name": "burgers transform",
+      "display_name": "Burgers transform",
+      "type": "definition",
+      "description": "A nonlinear bijection between holomorphic functions and rigid variable elliptic structures.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "holomorphic functions",
+      "display_name": "holomorphic functions",
+      "type": "object",
+      "description": "Functions that are complex differentiable in a neighborhood of every point in their domain.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "rigid variable elliptic structures",
+      "display_name": "rigid variable elliptic structures",
+      "type": "object",
+      "description": "Structures on the plane that exhibit rigidity and are associated with elliptic functions.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "complex burgers equation",
+      "display_name": "complex Burgers equation",
+      "type": "formula",
+      "description": "An equation given by \u03bbx + \u03bb\u03bby = 0, which the output of the Burgers transform satisfies.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "c1 function",
+      "display_name": "C1 function",
+      "type": "object",
+      "description": "A function that is continuously differentiable.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "hol(u, c+)",
+      "display_name": "Hol(U, C+)",
+      "type": "object",
+      "description": "The space of holomorphic functions mapping from U to C+.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "obstruction formula",
+      "display_name": "obstruction formula",
+      "type": "formula",
+      "description": "A formula that quantifies the cost of non-holomorphicity at the level of the initial data.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "f-analytics hierarchy",
+      "display_name": "f-analytics hierarchy",
+      "type": "definition",
+      "description": "A classification of functions based on their complexity and the resulting structures.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "affine automorphisms",
+      "display_name": "affine automorphisms",
+      "type": "object",
+      "description": "Transformations that preserve the structure of the complex plane.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "name": "jacobian-twisted multiplicativity",
+      "display_name": "Jacobian-twisted multiplicativity",
+      "type": "definition",
+      "description": "A property that the propagator Pf satisfies, which deforms the seed algebra.",
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "variable elliptic structures",
+      "target": "ellipticity",
+      "relation": "defines",
+      "details": [
+        "Variable elliptic structures are characterized by their ellipticity properties."
+      ],
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "source": "generalized cauchy\u2013riemann operators",
+      "target": "variable cauchy\u2013riemann system",
+      "relation": "generalizes",
+      "details": [
+        "Generalized Cauchy\u2013Riemann operators extend the classical system to variable contexts."
+      ],
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "source": "universal burgers transport",
+      "target": "rigidity",
+      "relation": "related_to",
+      "details": [
+        "The concept of rigidity is connected to the transport phenomena described by the Universal Burgers Transport theorem."
+      ],
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "source": "obstruction field",
+      "target": "rigidity",
+      "relation": "implies",
+      "details": [
+        "The presence of an obstruction field can indicate conditions of rigidity in the system."
+      ],
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "source": "product rule",
+      "target": "inhomogeneous coefficients",
+      "relation": "specializes_to",
+      "details": [
+        "The product rule can be applied in contexts involving inhomogeneous coefficients."
+      ],
+      "papers": [
+        "2601.19274v4.pdf"
+      ]
+    },
+    {
+      "source": "elliptic system",
+      "target": "ellipticity constant",
+      "relation": "defines",
+      "details": [
+        "The ellipticity constant is a characteristic of the elliptic system."
+      ],
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "source": "transport obstruction g",
+      "target": "elliptic system",
+      "relation": "related_to",
+      "details": [
+        "The transport obstruction G indicates structural properties of the elliptic system."
+      ],
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "source": "beltrami coefficient \u00b5",
+      "target": "transport obstruction g",
+      "relation": "related_to",
+      "details": [
+        "The Beltrami coefficient measures the distance from standard structure, while G measures coherence."
+      ],
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "source": "initial value problem",
+      "target": "analytic data",
+      "relation": "uses",
+      "details": [
+        "The initial value problem is well posed for analytic data."
+      ],
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "source": "principal symbol",
+      "target": "elliptic system",
+      "relation": "is_instance_of",
+      "details": [
+        "The principal symbol is a key component in determining the properties of the elliptic system."
+      ],
+      "papers": [
+        "2602.15479v1.pdf"
+      ]
+    },
+    {
+      "source": "burgers transform",
+      "target": "holomorphic functions",
+      "relation": "uses",
+      "details": [
+        "The Burgers transform maps holomorphic functions to rigid variable elliptic structures."
+      ],
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "source": "burgers transform",
+      "target": "complex burgers equation",
+      "relation": "implies",
+      "details": [
+        "The output of the Burgers transform satisfies the complex Burgers equation."
+      ],
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "source": "c1 function",
+      "target": "holomorphic functions",
+      "relation": "implies",
+      "details": [
+        "Any C1 function whose implicit solution satisfies the complex Burgers equation must be holomorphic."
+      ],
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "source": "hol(u, c+)",
+      "target": "burgers transform",
+      "relation": "related_to",
+      "details": [
+        "Hol(U, C+) is identified as the maximal seed space compatible with rigidity."
+      ],
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "source": "obstruction formula",
+      "target": "holomorphic functions",
+      "relation": "quantifies",
+      "details": [
+        "The obstruction formula quantifies the cost of non-holomorphicity related to holomorphic functions."
+      ],
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "source": "f-analytics hierarchy",
+      "target": "rigid variable elliptic structures",
+      "relation": "generalizes",
+      "details": [
+        "The f-analytics hierarchy characterizes different classes of functions leading to rigid variable elliptic structures."
+      ],
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    },
+    {
+      "source": "jacobian-twisted multiplicativity",
+      "target": "burgers transform",
+      "relation": "defines",
+      "details": [
+        "Jacobian-twisted multiplicativity is a property that defines how the propagator interacts with the Burgers transform."
+      ],
+      "papers": [
+        "2602.19251v1.pdf"
+      ]
+    }
+  ]
+}

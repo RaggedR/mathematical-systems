@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>INSTINCT Level 2 — Research Themes (math)</title>
+<style>
+  body { margin: 0; overflow: hidden; background: #0d1117; font-family: -apple-system, sans-serif; }
+  svg { width: 100vw; height: 100vh; }
+  .link { stroke-opacity: 0.6; }
+  .link.strong { stroke: #f0883e; }
+  .link.moderate { stroke: #58a6ff; }
+  .link.weak { stroke: #484f58; }
+  .node circle { stroke: #fff; stroke-width: 2px; cursor: pointer; fill: #238636; }
+  .node text { fill: #c9d1d9; font-size: 12px; font-weight: bold; pointer-events: none; }
+  #tooltip {
+    position: absolute; background: rgba(13,17,23,0.95); color: #c9d1d9;
+    padding: 12px 16px; border-radius: 8px; font-size: 13px;
+    pointer-events: none; display: none; max-width: 400px;
+    border: 1px solid #30363d;
+  }
+  #tooltip .title { font-weight: bold; font-size: 16px; color: #58a6ff; margin-bottom: 6px; }
+  #title {
+    position: absolute; top: 16px; left: 16px; color: #58a6ff;
+    font-size: 18px; font-weight: bold;
+    background: rgba(13,17,23,0.8); padding: 10px 16px; border-radius: 8px;
+  }
+  #title small { color: #8b949e; font-size: 12px; font-weight: normal; display: block; margin-top: 4px; }
+  #legend {
+    position: absolute; bottom: 16px; left: 16px; color: #8b949e;
+    background: rgba(13,17,23,0.8); padding: 10px 16px; border-radius: 8px; font-size: 12px;
+  }
+  #legend span { display: inline-block; width: 20px; height: 3px; vertical-align: middle; margin-right: 6px; }
+</style>
+</head>
+<body>
+<div id="title">INSTINCT Level 2 — math Research Themes<small>20 themes, 13 connections</small></div>
+<div id="tooltip"></div>
+<div id="legend">
+  <span style="background:#f0883e"></span>Strong &nbsp;
+  <span style="background:#58a6ff"></span>Moderate &nbsp;
+  <span style="background:#484f58"></span>Weak
+</div>
+<svg></svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+const data = {"nodes": [{"id": "elliptic-systems", "label": "Elliptic Systems and Structures", "description": "This theme explores the mathematical framework of elliptic systems, focusing on the conditions and properties that define ellipticity. It includes the study of differential equations and structures that exhibit elliptic behavior.", "concepts": 5, "size": 6095}, {"id": "holomorphic-functions", "label": "Holomorphic Functions and Complex Analysis", "description": "This theme delves into the study of holomorphic functions, which are central to complex analysis. It covers their properties, applications, and the associated mathematical structures.", "concepts": 5, "size": 5427}, {"id": "transport-phenomena", "label": "Transport Phenomena in Mathematical Systems", "description": "This theme investigates the transport phenomena within mathematical systems, focusing on how structures and functions move and transform under various conditions.", "concepts": 5, "size": 5236}, {"id": "rigidity-and-structure", "label": "Rigidity and Structural Analysis", "description": "This theme explores the concept of rigidity in mathematical structures, examining how fixed and moving structures align and interact within various systems.", "concepts": 5, "size": 6214}, {"id": "differential-equations", "label": "Differential Equations and Their Solutions", "description": "This theme covers the study of differential equations, focusing on their formulation, solutions, and the initial value problems associated with them.", "concepts": 5, "size": 6740}, {"id": "variable-elliptic-structures", "label": "Variable Elliptic Structures", "description": "This theme focuses on the study of variable elliptic structures, examining how ellipticity varies and the implications for mathematical analysis.", "concepts": 5, "size": 5723}, {"id": "obstruction-theory", "label": "Obstruction Theory in Mathematical Systems", "description": "This theme investigates the concept of obstructions in mathematical systems, focusing on how they affect transport and transformation within these systems.", "concepts": 5, "size": 5914}, {"id": "spectral-analysis", "label": "Spectral Analysis of Mathematical Operators", "description": "This theme explores the spectral properties of mathematical operators, focusing on the analysis of their behavior and implications for mathematical systems.", "concepts": 5, "size": 5864}, {"id": "complex-structures", "label": "Complex Structures and Their Transformations", "description": "This theme examines complex structures in mathematics, focusing on their properties, transformations, and the conditions that affect their behavior.", "concepts": 5, "size": 5511}, {"id": "analytic-functions", "label": "Analytic Functions and Hierarchies", "description": "This theme covers the study of analytic functions, focusing on their classification, properties, and the hierarchies that emerge from their analysis.", "concepts": 5, "size": 6593}, {"id": "bijective-transformations", "label": "Bijective Transformations in Mathematical Systems", "description": "This theme explores bijective transformations within mathematical systems, focusing on their properties and the implications for system behavior.", "concepts": 5, "size": 5637}, {"id": "calculus-techniques", "label": "Calculus Techniques in Differential Analysis", "description": "This theme focuses on calculus techniques used in the analysis of differential equations and systems, emphasizing their application and effectiveness.", "concepts": 5, "size": 5948}, {"id": "mathematical-invariants", "label": "Mathematical Invariants in System Analysis", "description": "This theme investigates the role of invariants in mathematical systems, focusing on their properties and how they aid in system analysis and solution.", "concepts": 5, "size": 6022}, {"id": "polynomial-structures", "label": "Polynomial Structures in Mathematical Systems", "description": "This theme explores the role of polynomial structures in mathematical systems, focusing on their properties and implications for system behavior.", "concepts": 5, "size": 6302}, {"id": "differentiability", "label": "Differentiability in Mathematical Functions", "description": "This theme examines the concept of differentiability in mathematical functions, focusing on its implications for function behavior and system analysis.", "concepts": 5, "size": 6068}, {"id": "system-coherence", "label": "System Coherence in Elliptic Structures", "description": "This theme investigates the coherence of systems within elliptic structures, focusing on how coherence affects system behavior and analysis.", "concepts": 5, "size": 5029}, {"id": "parameter-analysis", "label": "Parameter Analysis in Mathematical Systems", "description": "This theme explores the role of parameters in mathematical systems, focusing on their analysis and how they affect system behavior and solutions.", "concepts": 5, "size": 5923}, {"id": "system-regularity", "label": "System Regularity and Solvability", "description": "This theme focuses on the regularity and solvability of mathematical systems, examining the conditions that ensure solutions and their implications.", "concepts": 5, "size": 5744}, {"id": "mathematical-transformations", "label": "Mathematical Transformations and Their Implications", "description": "This theme examines the role of transformations in mathematical systems, focusing on their properties and how they affect system behavior and analysis.", "concepts": 5, "size": 5837}, {"id": "complex-differential-systems", "label": "Complex Differential Systems and Equations", "description": "This theme explores complex differential systems, focusing on their formulation, properties, and the equations that govern their behavior.", "concepts": 5, "size": 5670}], "links": [{"source": "elliptic-systems", "target": "variable-elliptic-structures", "weight": 3, "strength": "strong", "description": "Both themes focus on elliptic systems, with the latter examining variability in ellipticity.", "bridging": "ellipticity, Variable Elliptic Structures"}, {"source": "holomorphic-functions", "target": "complex-structures", "weight": 3, "strength": "strong", "description": "Holomorphic functions are central to complex analysis, which is a key aspect of complex structures.", "bridging": "holomorphic functions, complex Burgers equation"}, {"source": "transport-phenomena", "target": "obstruction-theory", "weight": 3, "strength": "strong", "description": "Transport phenomena are affected by obstructions, which are studied in obstruction theory.", "bridging": "transport obstruction G, Universal Burgers Transport"}, {"source": "rigidity-and-structure", "target": "system-coherence", "weight": 2, "strength": "moderate", "description": "Rigidity in structures contributes to system coherence in elliptic structures.", "bridging": "rigid variable elliptic structures, Ellipticity"}, {"source": "differential-equations", "target": "complex-differential-systems", "weight": 3, "strength": "strong", "description": "Complex differential systems are a subset of differential equations, focusing on complex variables.", "bridging": "first-order PDE, Generalized Cauchy\u2013Riemann Operators"}, {"source": "spectral-analysis", "target": "parameter-analysis", "weight": 2, "strength": "moderate", "description": "Spectral analysis often involves parameter analysis, particularly spectral parameters.", "bridging": "Canonical Spectral Parameter, principal symbol"}, {"source": "analytic-functions", "target": "differentiability", "weight": 3, "strength": "strong", "description": "Analytic functions are inherently linked to differentiability, as they are infinitely differentiable.", "bridging": "analytic data, C1 function"}, {"source": "bijective-transformations", "target": "mathematical-transformations", "weight": 2, "strength": "moderate", "description": "Bijective transformations are a specific type of mathematical transformation.", "bridging": "Burgers transform, affine automorphisms"}, {"source": "calculus-techniques", "target": "differential-equations", "weight": 3, "strength": "strong", "description": "Calculus techniques are essential for solving and analyzing differential equations.", "bridging": "Product Rule, initial value problem"}, {"source": "mathematical-invariants", "target": "system-regularity", "weight": 2, "strength": "moderate", "description": "Mathematical invariants can influence the regularity and solvability of systems.", "bridging": "transport-theoretic invariant, Ellipticity"}, {"source": "polynomial-structures", "target": "spectral-analysis", "weight": 2, "strength": "moderate", "description": "Polynomial structures often appear in spectral analysis, particularly in the study of operators.", "bridging": "Structure Polynomial, Canonical Spectral Parameter"}, {"source": "system-coherence", "target": "variable-elliptic-structures", "weight": 2, "strength": "moderate", "description": "System coherence is crucial in understanding variable elliptic structures.", "bridging": "Variable Elliptic Structures, Ellipticity"}, {"source": "parameter-analysis", "target": "complex-structures", "weight": 2, "strength": "moderate", "description": "Parameter analysis is important in understanding the behavior of complex structures.", "bridging": "Beltrami coefficient \u00b5, principal symbol"}]};
+const width = window.innerWidth, height = window.innerHeight;
+const svg = d3.select("svg").attr("viewBox", [0, 0, width, height]);
+const g = svg.append("g");
+svg.call(d3.zoom().scaleExtent([0.3, 5]).on("zoom", (e) => g.attr("transform", e.transform)));
+const simulation = d3.forceSimulation(data.nodes)
+  .force("link", d3.forceLink(data.links).id(d => d.id).distance(d => 200 / (d.weight || 1)))
+  .force("charge", d3.forceManyBody().strength(-500))
+  .force("center", d3.forceCenter(width / 2, height / 2))
+  .force("collision", d3.forceCollide().radius(60));
+const link = g.append("g").selectAll("line").data(data.links).join("line")
+  .attr("class", d => "link " + d.strength).attr("stroke-width", d => Math.max(1.5, d.weight * 2));
+link.on("mouseover", (e, d) => {
+  tooltip.style("display","block")
+    .html(`<div class="title">${d.description}</div><div style="margin-top:6px;color:#8b949e">Strength: ${d.strength}<br>Bridging: ${d.bridging}</div>`);
+}).on("mousemove", (e) => {
+  tooltip.style("left",(e.pageX+15)+"px").style("top",(e.pageY-10)+"px");
+}).on("mouseout", () => tooltip.style("display","none"));
+const node = g.append("g").selectAll("g").data(data.nodes).join("g").attr("class","node")
+  .call(d3.drag().on("start",ds).on("drag",dd).on("end",de));
+node.append("circle").attr("r", d => 15 + d.concepts * 1.5);
+node.append("text").text(d => d.label).attr("x", d => 18 + d.concepts * 1.5).attr("y", 4);
+const tooltip = d3.select("#tooltip");
+node.on("mouseover", (e, d) => {
+  tooltip.style("display","block")
+    .html(`<div class="title">${d.label}</div><div class="desc">${d.description}</div>
+           <div style="margin-top:8px;color:#8b949e">${d.concepts} key concepts</div>`);
+}).on("mousemove", (e) => {
+  tooltip.style("left",(e.pageX+15)+"px").style("top",(e.pageY-10)+"px");
+}).on("mouseout", () => tooltip.style("display","none"));
+simulation.on("tick", () => {
+  link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+  node.attr("transform",d=>`translate(${d.x},${d.y})`);
+});
+function ds(e){if(!e.active)simulation.alphaTarget(0.3).restart();e.subject.fx=e.subject.x;e.subject.fy=e.subject.y;}
+function dd(e){e.subject.fx=e.x;e.subject.fy=e.y;}
+function de(e){if(!e.active)simulation.alphaTarget(0);e.subject.fx=null;e.subject.fy=null;}
+</script>
+</body>
+</html>

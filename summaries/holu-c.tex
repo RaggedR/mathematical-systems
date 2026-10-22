@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Holu C}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+The space of holomorphic functions mapping from an open subset $U \subset \mathbb{C}$ to the complex upper half-plane $\mathbb{C}^+$ is denoted as $\text{Hol}(U, \mathbb{C}^+)$. Formally, we define:
+
+\begin{definition}
+Let $U \subset \mathbb{C}$ be an open set. The space $\text{Hol}(U, \mathbb{C}^+)$ consists of all functions $f: U \to \mathbb{C}$ that are holomorphic (complex differentiable) on $U$ and satisfy $\text{Im}(f(z)) > 0$ for all $z \in U$.
+\end{definition}
+
+\section{Examples}
+To illustrate the concept of $\text{Hol}(U, \mathbb{C}^+)$, consider the following examples:
+
+\begin{example}
+1. The function $f(z) = i + z$ is holomorphic on $U = \mathbb{C}$ and maps to $\mathbb{C}^+$ since $\text{Im}(f(z)) = 1 + \text{Im}(z) > 0$ for all $z \in \mathbb{C}$.
+
+2. The function $f(z) = e^z$ is holomorphic on $U = \mathbb{C}$. However, it does not map to $\mathbb{C}^+$ for all $z$. Specifically, for $z = x + iy$, $\text{Im}(e^z) = e^x \sin(y)$, which can be negative depending on the value of $y$. Thus, $f(z)$ is not in $\text{Hol}(U, \mathbb{C}^+)$.
+
+3. The function $f(z) = \frac{1}{z - i}$ is holomorphic on $U = \mathbb{C} \setminus \{i\}$ and maps to $\mathbb{C}^+$ for $\text{Re}(z) > 0$. Here, $\text{Im}(f(z)) > 0$ holds as long as $z$ is in the right half-plane.
+
+\end{example}
+
+\section{Key Results}
+Several important results pertain to the space $\text{Hol}(U, \mathbb{C}^+)$, particularly in the context of the Burgers transform. 
+
+\begin{theorem}[Properties of the Burgers Transform]
+Let $f \in \text{Hol}(U, \mathbb{C}^+)$ with $U \cap \mathbb{R}$ containing an interval. The following properties hold:
+\begin{itemize}
+    \item[(i)] \textbf{Rigidity:} The output $\lambda = B[f]$ satisfies the equation $\lambda_x + \lambda \lambda_y = 0$ on $\Omega_f$.
+    \item[(ii)] \textbf{Inversion:} The restriction to the $y$-axis recovers $f$: $B[f](0, y) = f(y)$ for all $y$ with $(0, y) \in \Omega_f$.
+    \item[(iii)] \textbf{Regularity:} If $f \in C^{k,\alpha}(U)$ for $k \geq 1$ and $0 < \alpha < 1$, then $B[f] \in C^{k,\alpha}(\Omega_f)$.
+    \item[(iv)] \textbf{Bijectivity:} The map $f \mapsto B[f]$ is a bijection between $\text{Hol}(U, \mathbb{C}^+)$ and the space of $C^1$ solutions of the associated quasilinear equation on domains containing a segment of the $y$-axis, with $\text{Im}(\lambda) > 0$.
+\end{itemize}
+\end{theorem}
+This theorem is attributed to Alayón-Solarz (2023) \cite{2602.19251v1}.
+
+\section{Diagrams / Visual Description}
+The space $\text{Hol}(U, \mathbb{C}^+)$ can be visualized as a subset of the complex plane where the imaginary part of the function values is strictly positive. This can be represented graphically as follows:
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{complex_plane.png}
+\end{center}
+
+In this diagram, the shaded region represents $\mathbb{C}^+$, while the curves represent the images of holomorphic functions from $U$ mapping into this region.
+
+\section{Connections}
+The concept of $\text{Hol}(U, \mathbb{C}^+)$ is closely related to several areas in complex analysis and differential equations. Notably, it is connected to the Burgers transform, which is a method used to study solutions of certain nonlinear partial differential equations. The properties of holomorphic functions in this space also relate to the theory of elliptic structures and rigidity conditions in complex geometry.
+
+Moreover, the implicit function theorem plays a crucial role in establishing the existence and uniqueness of solutions in this context, as shown in the results concerning the Burgers transform.
+
+\section{References}
+\begin{itemize}
+    \item Alayón-Solarz, D. (2023). "On the properties of the Burgers transform." arXiv:2602.19251v1.
+\end{itemize}\end{document}

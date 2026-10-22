@@ -1,0 +1,91 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{First Order Pde}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+A \textbf{first-order partial differential equation (PDE)} is a type of differential equation that involves only first derivatives of the unknown function. Formally, a first-order PDE can be expressed in the general form:
+
+$$
+F(x, y, u, u_x, u_y) = 0,
+$$
+
+where \( u = u(x, y) \) is the unknown function, \( u_x = \frac{\partial u}{\partial x} \), and \( u_y = \frac{\partial u}{\partial y} \). The function \( F \) is typically assumed to be continuously differentiable.
+
+First-order PDEs can be classified into several types, including linear and nonlinear equations. A linear first-order PDE can be written as:
+
+$$
+a(x, y) u_x + b(x, y) u_y + c(x, y) u = d(x, y),
+$$
+
+where \( a, b, c, \) and \( d \) are given functions of \( x \) and \( y \).
+
+\section{Examples}
+\subsection{Example 1: Linear First-Order PDE}
+Consider the linear first-order PDE:
+
+$$
+u_x + u_y = 0.
+$$
+
+This equation states that the rate of change of \( u \) with respect to \( x \) plus the rate of change of \( u \) with respect to \( y \) is zero. 
+
+To solve this, we can use the method of characteristics. The characteristic equations are given by:
+
+$$
+\frac{dx}{dt} = 1, \quad \frac{dy}{dt} = 1, \quad \frac{du}{dt} = 0.
+$$
+
+Solving these, we find that the characteristics are lines of the form \( x + y = C \), where \( C \) is a constant. The general solution can be expressed as:
+
+$$
+u(x, y) = f(C) = f(x + y),
+$$
+
+where \( f \) is an arbitrary function.
+
+\subsection{Example 2: Nonlinear First-Order PDE}
+Consider the nonlinear first-order PDE known as the Burgers' equation:
+
+$$
+u_t + u u_x = 0,
+$$
+
+where \( u_t = \frac{\partial u}{\partial t} \) and \( u_x = \frac{\partial u}{\partial x} \).
+
+This equation can be solved using the method of characteristics. The characteristic equations are:
+
+$$
+\frac{dx}{dt} = u, \quad \frac{du}{dt} = 0.
+$$
+
+This implies that along the characteristic curves, \( u \) is constant. The solution can be expressed in terms of the initial condition \( u(x, 0) = f(x) \):
+
+$$
+u(x, t) = f(x - ut).
+$$
+
+\section{Key Results}
+One of the significant results concerning first-order PDEs is the existence and uniqueness theorem, which states that under certain conditions, a first-order PDE has a unique solution that passes through a given point in the domain. This is often formalized using the method of characteristics.
+
+For instance, L. C. Evans in his book "Partial Differential Equations" (2010) discusses the conditions under which solutions exist and are unique for first-order PDEs, emphasizing the role of the initial conditions and the characteristics of the equation.
+
+\section{Diagrams / Visual Description}
+The method of characteristics can be visualized as follows:
+
+1. **Characteristics**: In the \( (x, y) \) plane, the characteristics are curves along which the solution is constant. For the equation \( u_x + u_y = 0 \), these are straight lines of the form \( x + y = C \).
+
+2. **Solution Surface**: The solution \( u(x, y) \) can be visualized as a surface above the \( (x, y) \) plane, where the height of the surface at any point \( (x, y) \) corresponds to the value of \( u \).
+
+\section{Connections}
+First-order PDEs are foundational in the study of partial differential equations and have connections to various fields, including fluid dynamics, thermodynamics, and mathematical physics. They often serve as models for wave propagation, traffic flow, and other phenomena where the rate of change depends on the current state.
+
+Additionally, first-order PDEs are related to higher-order PDEs through methods such as the method of characteristics and can often be transformed into systems of first-order equations, which can then be analyzed using similar techniques.
+
+\section{References}
+- Evans, L. C. (2010). \textit{Partial Differential Equations}. Graduate Studies in Mathematics, vol. 19, American Mathematical Society, Providence, RI.
+- Cole, J. D. (1951). On a quasi-linear parabolic equation occurring in aerodynamics. \textit{Quarterly of Applied Mathematics}, 9, 225-236.
+- Peaceman, D. W., & Rachford, H. H. Jr. (1955). The Numerical Solution of Parabolic and Elliptic Differential Equations. \textit{J. Soc. Indust. Appl. Math.}, 3, 28–41.\end{document}

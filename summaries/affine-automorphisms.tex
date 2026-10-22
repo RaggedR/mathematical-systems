@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\title{Affine Automorphisms}
+\date{}
+\begin{document}
+\maketitle
+\section{Definition}
+An \textbf{affine automorphism} of the complex plane $\mathbb{C}$ is a transformation of the form:
+$$
+f(z) = az + b,
+$$
+where $a \in \mathbb{C} \setminus \{0\}$ and $b \in \mathbb{C}$. This transformation is a composition of a linear transformation (scaling and rotation) and a translation. 
+
+Affine automorphisms preserve the structure of the complex plane, meaning they maintain the properties of lines and parallelism. Specifically, they map lines to lines and preserve the ratios of distances along those lines.
+
+\section{Examples}
+1. **Example of a simple affine automorphism**:
+   Let $f(z) = 2z + 3$. Here, $a = 2$ and $b = 3$. This transformation scales the complex plane by a factor of 2 and translates every point by 3 units to the right.
+
+2. **Example of a rotation and translation**:
+   Consider $f(z) = e^{i\frac{\pi}{4}}z + 1$. Here, $a = e^{i\frac{\pi}{4}}$ (which represents a rotation by 45 degrees) and $b = 1$ (a translation). This transformation rotates every point in the complex plane by 45 degrees and then shifts it one unit to the right.
+
+3. **Example of an inversion**:
+   The transformation $f(z) = \frac{1}{z} + 1$ is also an affine automorphism, where $a = \frac{1}{z}$ (which is not a linear transformation in the strict sense but can be considered in the context of projective transformations) and $b = 1$. This transformation maps points in the complex plane to their inverses and translates them.
+
+\section{Key Results}
+- **Preservation of Structure**: Affine automorphisms preserve the affine structure of $\mathbb{C}$, meaning they maintain the properties of lines and parallelism. This is crucial in the study of complex dynamics and algebraic geometry (see \cite{arxiv:2601.19274}).
+- **Classification**: The set of all affine automorphisms of $\mathbb{C}$ forms a group under composition, known as the affine group $\text{Aff}(\mathbb{C})$. This group is isomorphic to the semidirect product of the group of non-zero complex numbers (representing scaling and rotation) and the group of translations (see \cite{arxiv:2601.19274}).
+
+\section{Diagrams / Visual Description}
+To visualize an affine automorphism, consider the transformation $f(z) = az + b$. The effect of this transformation can be illustrated as follows:
+
+- **Original Points**: Represent points in the complex plane as dots.
+- **Transformed Points**: After applying the transformation, the new points can be represented as new dots. The original and transformed points can be connected by arrows to show the mapping.
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{affine_transformation.png}
+\caption{Illustration of an affine transformation in the complex plane.}
+\end{center}
+
+In this diagram, the original points are shown in blue, while the transformed points are shown in red. The arrows indicate the direction of the transformation.
+
+\section{Connections}
+Affine automorphisms are closely related to several other mathematical concepts:
+
+- **Linear Transformations**: Affine automorphisms can be seen as a combination of linear transformations and translations. They generalize linear transformations by allowing for translations.
+- **Projective Geometry**: In projective geometry, affine transformations can be extended to projective transformations, which include points at infinity.
+- **Complex Dynamics**: In the study of complex dynamics, affine automorphisms play a role in understanding the behavior of iterative functions on the complex plane.
+
+\section{References}
+\begin{itemize}
+    \item \cite{arxiv:2601.19274}
+\end{itemize}\end{document}

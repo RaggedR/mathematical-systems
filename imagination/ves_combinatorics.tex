@@ -1,0 +1,466 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\rhoT}{\rho_T}
+\newcommand{\dzbar}{\partial_{\bar{z}_i}}
+
+\theoremstyle{plain}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{observation}{Observation}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\title{Combinatorics of the Poincar\'e Transport Residual:\\
+  Discretisation, Monodromy, and Cylindric Partitions}
+\author{Speculative notes from a conversation}
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We sketch a network of connections between the Poincar\'e transport
+residual~$\rhoT$ of a viscous elliptic structure (VES) and the
+combinatorics of exactly solvable lattice models. The central
+observation is that the rigidity condition~$G=0$ is a continuous
+analogue of the Yang--Baxter equation, and that~$\rhoT$ measures
+distance from exact solvability. When discretised on a lattice, the
+VES compatibility condition yields local rules of the type appearing
+in growth diagrams, puzzle pieces, and transfer-matrix formulations of
+Schur functions. We propose that the profile of a cylindric partition
+is a discrete monodromy, the combinatorial counterpart of~$\rhoT$.
+\end{abstract}
+
+\tableofcontents
+
+%% ────────────────────────────────────────────────────
+\section{The Poincar\'e transport residual}
+%% ────────────────────────────────────────────────────
+
+Let~$\Omega\subset\R^2$ be a domain. A \emph{viscous elliptic
+structure} (VES) on~$\Omega$ is specified by a smooth generator
+$i\colon\Omega\to\D$, where~$\D$ is the open unit disk. The
+associated Cauchy--Riemann operator is
+\[
+  \dzbar f \;=\; \tfrac{1}{2}\bigl(f_x + i(x,y)\,f_y\bigr),
+\]
+and a function~$f$ is \emph{$i$-holomorphic} when $\dzbar f = 0$.
+
+\begin{definition}[Rigidity obstruction]
+The \emph{obstruction tensor} of a VES is
+\[
+  G \;=\; i_x + i\cdot i_y.
+\]
+The structure is \emph{rigid} (admits a full holomorphic calculus)
+if and only if $G=0$.
+\end{definition}
+
+\begin{definition}[Poincar\'e transport residual]
+The \emph{Poincar\'e transport residual} is
+\[
+  \boxed{\rhoT \;=\; \frac{|G|}{1-|i|^2}
+         \;=\; \frac{|i_x + i\cdot i_y|}{1-|i|^2},}
+\]
+where $(1-|i|^2)^{-1}$ is the conformal factor of the Poincar\'e
+metric at $i\in\D$.
+\end{definition}
+
+Key properties:
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Invariance.} $\rhoT$ is invariant under M\"obius
+    automorphisms of~$\D$ acting on~$i$---it is a genuine geometric
+    invariant.
+  \item \textbf{Blow-up.} As $|i|\to 1$ (degenerate ellipticity),
+    $\rhoT\to\infty$ even for bounded~$G$, correctly detecting
+    the parabolic/hyperbolic boundary.
+  \item \textbf{Vanishing.} $\rhoT=0$ if and only if $G=0$
+    (rigidity).
+  \item \textbf{First-order.} $\rhoT$ involves one derivative
+    of~$i$; it detects how the structure \emph{varies}, not just
+    what it is at a point.
+\end{enumerate}
+
+\begin{remark}[The difficulty plane]
+The pair $(\rhoT,\,|\mu|)$---where $|\mu|$ is the Beltrami
+modulus---defines a two-dimensional ``difficulty plane.'' The
+invariant~$|\mu|$ measures algebraic deviation (anisotropy);
+$\rhoT$ measures differential deviation (spatial variation). They
+are categorically independent.
+\end{remark}
+
+
+%% ────────────────────────────────────────────────────
+\section{The Burgers connection}
+%% ────────────────────────────────────────────────────
+
+The obstruction $G = i_x + i\cdot i_y$ has the algebraic form of the
+\emph{Burgers nonlinearity}~$u\,u_x$ in the inviscid Burgers equation
+$u_t + u\,u_x = 0$. This is not a coincidence: the VES monograph
+identifies~$G$ as the nonlinear term in the Burgers transport equation
+for the spectral parameter~$\lambda$.
+
+The Burgers equation is the gateway to a remarkable chain of
+connections.
+
+\subsection{The chain: Burgers $\to$ KPZ $\to$ Schur}
+
+\begin{enumerate}[label=\textbf{Step \arabic*.}, leftmargin=2.5em]
+
+\item \textbf{Burgers $\to$ KPZ.}
+The Hopf--Cole transformation $u = -2\nu\,\partial_x\log Z$
+linearises Burgers into the heat equation. Adding space-time white
+noise~$\eta$ gives the \emph{KPZ equation}
+(Kardar--Parisi--Zhang, 1986):
+\[
+  \partial_t h = \nu\,\partial_x^2 h
+    + \tfrac{\lambda}{2}(\partial_x h)^2 + \eta(x,t).
+\]
+Setting $u=\lambda\,\partial_x h$ recovers stochastic Burgers; the
+Hopf--Cole transform $Z=\exp(\lambda h/2\nu)$ gives the stochastic
+heat equation with multiplicative noise, whose solution is a
+\emph{directed polymer} partition function.
+
+\item \textbf{KPZ $\to$ growth models.}
+KPZ is the continuum limit of discrete growth models. The cleanest
+is \emph{last passage percolation} (LPP): given i.i.d.\ weights
+$w(i,j)$ on~$\Z_{>0}^2$, define
+\[
+  G(m,n) = \max_{\pi:(1,1)\to(m,n)}
+    \sum_{(i,j)\in\pi} w(i,j)
+\]
+over up-right lattice paths~$\pi$. The surface~$h(m,n)=G(m,n)$
+grows in the KPZ universality class with fluctuation
+exponent~$\beta=1/3$.
+
+The \emph{totally asymmetric simple exclusion process} (TASEP)---
+particles on~$\Z$ hopping right at rate~1 if the target is
+empty---is equivalent to LPP (Rost, 1981).
+
+\item \textbf{Growth models $\to$ Schur functions (via RSK).}
+The Robinson--Schensted--Knuth correspondence bijects
+nonneg-integer matrices to pairs of semistandard Young tableaux.
+Greene's theorem (1974): the shape~$\lambda_1$ equals the longest
+weakly increasing subsequence.
+
+For LPP with geometric weights $w(i,j)\sim\mathrm{Geom}(x_i y_j)$:
+the last passage time~$G(m,n)$ equals~$\lambda_1$ under RSK.
+The random partition is distributed according to the \emph{Schur
+measure} (Okounkov, 2001):
+\[
+  \mathrm{Prob}(\lambda) \;\propto\;
+    s_\lambda(x_1,\ldots,x_m)\,s_\lambda(y_1,\ldots,y_n),
+\]
+derived from the Cauchy identity
+$\sum_\lambda s_\lambda(x)\,s_\lambda(y) =
+  \prod_{i,j}(1-x_iy_j)^{-1}$.
+
+\item \textbf{Schur measure $\to$ Tracy--Widom.}
+The Schur measure is a \emph{determinantal point process}. The
+probability $\mathrm{Prob}(\lambda_1\le t)$ is a Fredholm
+determinant; steepest-descent analysis yields the \emph{Airy
+kernel}, and
+\[
+  F_2(s) = \det(I-K_{\mathrm{Airy}})_{L^2(s,\infty)}
+         = \exp\!\Bigl(-\int_s^\infty (x-s)\,q(x)^2\,dx\Bigr),
+\]
+where $q$~solves Painlev\'e~II: $q''=sq+2q^3$. This is the
+\emph{Tracy--Widom distribution}, first discovered as the
+fluctuation law for the largest eigenvalue of GUE random
+matrices (Tracy--Widom, 1994).
+
+\end{enumerate}
+
+\subsection{The role of Yang--Baxter and transfer matrices}
+
+The exact solvability at every level of this chain rests on the
+Yang--Baxter equation (YBE). For a vertex model with weights
+$R_{ab}^{cd}(u)$, the YBE ensures that transfer matrices
+$T(u) = \mathrm{tr}_{\mathrm{aux}}\prod_i R_i(u)$ commute:
+$[T(u),T(v)]=0$. This is why:
+\begin{itemize}
+  \item Schur functions are determinants (Jacobi--Trudi =
+    Lindstr\"om--Gessel--Viennot for non-intersecting paths).
+  \item The Schur measure is determinantal (commuting transfer
+    matrices $\Rightarrow$ free fermions).
+  \item The Fredholm determinant is computable in closed form.
+\end{itemize}
+
+The transfer operators $T_{\mathrm{free}}$ and
+$\bar{T}_{\mathrm{free}}$ of Zinn-Justin~\cite{ZJ2008}, acting on
+the fermionic Fock space of binary strings, sit precisely in this
+framework. The Littlewood--Richardson coefficients computed via
+puzzle pieces control the product structure of Schur functions,
+governing multi-point correlations in the Schur process.
+
+%% ────────────────────────────────────────────────────
+\section{Discretisation: from $\rhoT$ to local rules}
+\label{sec:discretisation}
+%% ────────────────────────────────────────────────────
+
+\begin{observation}
+Discretise~$\Omega$ on a grid. At each vertex $(x,y)$, place a
+generator $i(x,y)\in\D$. The rigidity condition $G=i_x+i\cdot i_y=0$
+becomes a \emph{nearest-neighbour constraint}: the values of~$i$ at
+adjacent sites must satisfy a compatibility relation.
+\end{observation}
+
+This is exactly the setup for:
+\begin{itemize}
+  \item \textbf{Puzzle pieces} (Knutson--Tao--Woodward): local rules
+    constraining adjacent tiles.
+  \item \textbf{Growth diagrams} (Fomin): local rules propagating
+    partitions through a grid, where the local rule is a
+    zero-curvature condition around each plaquette.
+  \item \textbf{Vertex models} (six-vertex, ice model): local weights
+    depending on adjacent edge states.
+\end{itemize}
+
+The generator~$i\in\D$ plays the role of the local state; $G=0$
+plays the role of the local rule. The fermionic Fock space of binary
+strings (encoding partitions) is a discretisation of the space of
+generators.
+
+\begin{question}
+Is there a natural discretisation of $G=0$ on a triangular or
+square lattice that recovers the interlacing condition on
+partitions? If so, $\rhoT$ would literally measure \emph{how much
+interlacing fails}.
+\end{question}
+
+\subsection{The difficulty plane as (inhomogeneity, anisotropy)}
+
+In lattice model language, the two axes of the difficulty plane map
+to fundamental distinctions:
+
+\medskip
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{VES invariant} & \textbf{Lattice model} & \textbf{Combinatorial effect} \\
+\midrule
+$|\mu|$ (Beltrami) & Anisotropy of local weights &
+  Deviation from isotropy \\
+$\rhoT$ (transport) & Inhomogeneity (weights vary site-to-site) &
+  Richer combinatorics \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+
+Homogeneous isotropic models give product-formula partition functions.
+Homogeneous anisotropic models give the six-vertex model, Schur
+functions, determinantal formulas. Inhomogeneous models are harder but
+produce the richest combinatorics: factorial Schur functions, double
+Schubert polynomials.
+
+
+%% ────────────────────────────────────────────────────
+\section{Profile as discrete monodromy}
+\label{sec:monodromy}
+%% ────────────────────────────────────────────────────
+
+This is the most speculative---and perhaps most suggestive---
+connection.
+
+\subsection{The analogy}
+
+In VES, $\rhoT$ measures the transport obstruction: the monodromy of
+the complex structure under parallel transport. The condition~$G=0$
+means trivial monodromy.
+
+A cylindric partition on a cylinder of circumference~$d$ with profile
+$c=(c_0,c_1,\ldots,c_{r-1})$ has a \emph{discrete monodromy}: as one
+traverses the cylinder, the boundary conditions shift by the profile.
+
+\medskip
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{VES (continuous)} & \textbf{Cylindric partitions (discrete)} \\
+\midrule
+$G=0$, trivial monodromy & Trivial profile $\to$ plane partitions \\
+$G\ne 0$, $\rhoT>0$ & Nontrivial profile $\to$ cylindric partitions \\
+$\rhoT$ measures twist magnitude & Profile measures boundary shift \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+
+\begin{conjecture}[Informal]
+There exists a discretisation scheme under which the cylindric
+profile~$c$ arises as the holonomy of the discrete VES connection
+around the cylinder, and~$\rhoT$ (integrated around the cycle)
+recovers a function of~$c$.
+\end{conjecture}
+
+\subsection{Positivity as ``mild deformation''}
+
+Under this analogy, Warnaar's positivity conjecture---that
+$Q_{n,c}(q)\ge 0$ coefficient-wise for rank-3 cylindric
+partitions---asserts that \emph{even when $\rhoT>0$, the partition
+function retains positivity}. The deformation from exact solvability
+is mild enough that combinatorial structure survives without
+catastrophic cancellation.
+
+\subsection{The $d\equiv 0\pmod{3}$ resonance}
+
+For rank~3, when $d\equiv 0\pmod{3}$ the profile distributes evenly
+among the three parts: the slack vector is
+$(d/3,\,d/3,\,d/3)$, which has no cyclic descent. The
+cyclic-descent injection rule (which works for all other~$d$) fails
+here.
+
+In the continuous picture, this corresponds to \emph{resonant
+monodromy}: the monodromy divides evenly into the rank, creating a
+fixed point under the cyclic symmetry. In KAM theory, resonant
+frequencies are exactly where small-denominator problems arise and
+invariant tori break down. The $d\equiv 0\pmod{3}$ obstruction may
+be a discrete manifestation of the same phenomenon.
+
+
+%% ────────────────────────────────────────────────────
+\section{Poincar\'e factors and $q$-series}
+%% ────────────────────────────────────────────────────
+
+A more speculative thread. The Poincar\'e conformal factor at
+$z\in\D$ is $(1-|z|^2)^{-1}$. Imagine a sequence of generators at
+different scales with $|i_k|=q^k$. The product of Poincar\'e
+factors gives
+\[
+  \prod_{k=1}^{n}\frac{1}{1-q^{2k}},
+\]
+which is a partition generating function (partitions into even parts
+$\le 2n$). The full $q$-Pochhammer symbol
+$(q;q)_\infty = \prod_{n\ge 1}(1-q^n)$---ubiquitous in partition
+theory---arises from a product over all levels.
+
+The Euler--Heine factorisation $\mathrm{GK}_c = H(z)\cdot F_c$,
+where $H=1/(zq;q)_\infty$, decomposes the generating function into a
+``universal'' part (product of Poincar\'e-like factors) and a
+``structural'' part~$F_c$. In the VES picture, this might correspond
+to:
+\[
+  \text{universal hyperbolic metric contribution}
+    \;\times\;
+  \text{structure-specific transport geometry.}
+\]
+
+\begin{question}
+Is there a multi-level VES (a tower of generators $i_1,i_2,\ldots$
+with prescribed nesting) whose ``total Poincar\'e factor'' is the
+$q$-Pochhammer symbol? If so, the E--H factorisation would have a
+geometric interpretation as separation of metric and transport
+contributions.
+\end{question}
+
+
+%% ────────────────────────────────────────────────────
+\section{Open directions}
+%% ────────────────────────────────────────────────────
+
+\begin{enumerate}
+  \item \textbf{Construct the discretisation.} Make
+    Section~\ref{sec:discretisation} precise: discretise the VES
+    rigidity condition on a square lattice and identify the resulting
+    local rule. Does it give interlacing? A vertex model?
+
+  \item \textbf{Deformed Yang--Baxter.} If $\rhoT$ measures distance
+    from exact solvability, what do Schur measures look like when
+    Yang--Baxter is only approximately satisfied? Is there a
+    ``$\rhoT$-deformed'' determinantal structure?
+
+  \item \textbf{Profile from holonomy.} Make the
+    Conjecture~in Section~\ref{sec:monodromy} precise: construct a
+    discrete VES on a cylindrical lattice whose holonomy recovers the
+    cylindric profile~$c$.
+
+  \item \textbf{Resonance and positivity.} Can KAM-type arguments
+    (small denominators at resonant frequencies) explain why
+    $d\equiv 0\pmod{3}$ is harder for the positivity conjecture?
+
+  \item \textbf{Growth diagrams as flat connections.} Fomin's local
+    rule for growth diagrams is a zero-curvature condition around each
+    plaquette. Formalise the correspondence: local rule = discrete
+    $G=0$, and the failure $G\ne 0$ = ``curvature'' of the growth
+    diagram.
+\end{enumerate}
+
+
+%% ────────────────────────────────────────────────────
+%% References
+%% ────────────────────────────────────────────────────
+
+\begin{thebibliography}{99}
+
+\bibitem{BDJ1999}
+J.~Baik, P.~Deift, K.~Johansson,
+\emph{On the distribution of the length of the longest increasing
+  subsequence of random permutations},
+J.~Amer.\ Math.\ Soc.\ \textbf{12} (1999), 1119--1178.
+
+\bibitem{Corwin2012}
+I.~Corwin,
+\emph{The Kardar--Parisi--Zhang equation and universality class},
+Random Matrices Theory Appl.\ \textbf{1} (2012), 1130001.
+
+\bibitem{Fomin1986}
+S.~Fomin,
+\emph{Generalized Robinson--Schensted--Knuth correspondence},
+Zap.\ Nauchn.\ Sem.\ LOMI \textbf{155} (1986), 156--175.
+
+\bibitem{Greene1974}
+C.~Greene,
+\emph{An extension of Schensted's theorem},
+Adv.\ Math.\ \textbf{14} (1974), 254--265.
+
+\bibitem{Johansson2000}
+K.~Johansson,
+\emph{Shape fluctuations and random matrices},
+Comm.\ Math.\ Phys.\ \textbf{209} (2000), 437--476.
+
+\bibitem{KPZ1986}
+M.~Kardar, G.~Parisi, Y.-C.~Zhang,
+\emph{Dynamic scaling of growing interfaces},
+Phys.\ Rev.\ Lett.\ \textbf{56} (1986), 889--892.
+
+\bibitem{Okounkov2001}
+A.~Okounkov,
+\emph{Infinite wedge and random partitions},
+Selecta Math.\ \textbf{7} (2001), 57--81.
+
+\bibitem{OR2003}
+A.~Okounkov, N.~Reshetikhin,
+\emph{Correlation function of Schur process with application to local
+  geometry of a random 3-dimensional Young diagram},
+J.~Amer.\ Math.\ Soc.\ \textbf{16} (2003), 581--603.
+
+\bibitem{Romik2015}
+D.~Romik,
+\emph{The Surprising Mathematics of Longest Increasing Subsequences},
+Cambridge Univ.\ Press, 2015.
+
+\bibitem{TW1994}
+C.~Tracy, H.~Widom,
+\emph{Level-spacing distributions and the Airy kernel},
+Comm.\ Math.\ Phys.\ \textbf{159} (1994), 151--174.
+
+\bibitem{ZJ2008}
+P.~Zinn-Justin,
+\emph{Littlewood--Richardson coefficients and integrable tilings},
+Electron.\ J.\ Combin.\ \textbf{16} (2009), R12.
+arXiv:0809.2392.
+
+\end{thebibliography}
+
+\end{document}
